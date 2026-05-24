@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Daily Big News — 2026-05-24</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Daily pre-market read of major U.S. equity-impacting news. Updated each morning.">
+<meta name="theme-color" content="#0f1419">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Daily Big News">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<style>
+  :root{
+    --bg:#0f1419;--card:#1a1f2e;--border:#2d3748;--text:#e2e8f0;--muted:#94a3b8;
+    --pos:#10b981;--neg:#ef4444;--neu:#f59e0b;--accent:#60a5fa;--hi:#a78bfa;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+  .wrap{max-width:1100px;margin:0 auto}
+  header{border-bottom:1px solid var(--border);padding-bottom:16px;margin-bottom:24px}
+  h1{margin:0 0 4px 0;font-size:26px}
+  h2{margin:28px 0 12px 0;font-size:20px;color:var(--accent);border-left:3px solid var(--accent);padding-left:10px}
+  h3{margin:18px 0 8px 0;font-size:16px;color:var(--hi)}
+  .meta{color:var(--muted);font-size:13px}
+  .tape{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:13px;color:var(--muted)}
+  .tape span b{color:var(--text)}
+  .lang-toggle{font-size:12px;margin-top:8px}
+  .lang-toggle a{color:var(--accent);text-decoration:none;border:1px solid var(--border);padding:3px 10px;border-radius:4px}
+  .news{display:grid;grid-template-columns:1fr;gap:12px}
+  .item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:grid;grid-template-columns:36px 1fr;gap:12px}
+  .num{font-size:22px;font-weight:700;color:var(--accent);line-height:1.1}
+  .headline{font-size:15px;font-weight:600;margin:0 0 6px 0}
+  .body{font-size:13.5px;color:var(--text);margin:0 0 8px 0}
+  .tagrow{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:11px;padding:3px 8px;border-radius:999px;font-weight:600;letter-spacing:.3px}
+  .t-sector{background:#1e293b;color:#cbd5e1;border:1px solid #334155}
+  .t-stock{background:#172554;color:#bfdbfe;border:1px solid #1e3a8a}
+  .t-pos{background:rgba(16,185,129,.15);color:var(--pos);border:1px solid var(--pos)}
+  .t-neg{background:rgba(239,68,68,.15);color:var(--neg);border:1px solid var(--neg)}
+  .t-neu{background:rgba(245,158,11,.15);color:var(--neu);border:1px solid var(--neu)}
+  table.cal{width:100%;border-collapse:collapse;font-size:13px;background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  table.cal th,table.cal td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--border)}
+  table.cal th{background:#111827;color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  table.cal tr:last-child td{border-bottom:none}
+  .imp-high{color:var(--neg);font-weight:700}
+  .imp-med{color:var(--neu);font-weight:600}
+  .imp-low{color:var(--muted)}
+  .concl{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-top:14px}
+  .concl table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  .concl th,.concl td{padding:7px 10px;border-bottom:1px solid var(--border);text-align:left}
+  .concl th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase}
+  .dir-b{color:var(--pos);font-weight:600}
+  .dir-s{color:var(--neg);font-weight:600}
+  .dir-n{color:var(--neu);font-weight:600}
+  .pick{margin:6px 0;padding-left:18px}
+  .footnote{font-size:11px;color:var(--muted);margin-top:24px;padding-top:14px;border-top:1px solid var(--border)}
+
+
+.dbn-chrome{position:sticky;top:0;z-index:10;background:rgba(15,20,25,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);margin:-24px -24px 18px -24px;padding:10px 24px}
+.dbn-bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.dbn-brand{font-weight:700;font-size:16px;color:var(--text);text-decoration:none;letter-spacing:.2px}
+.dbn-brand .dbn-dot{color:var(--accent)}
+.dbn-tag{font-size:11px;color:var(--muted);margin-left:8px}
+.dbn-lang a{color:var(--accent);text-decoration:none;font-size:12px;border:1px solid var(--border);padding:4px 10px;border-radius:999px}
+.dbn-history{max-width:1100px;margin:8px auto 0 auto;display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.dbn-history::-webkit-scrollbar{height:6px}
+.dbn-history::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.dbn-history a{flex:0 0 auto;font-size:12px;color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:4px 10px;border-radius:6px;white-space:nowrap;background:var(--card)}
+.dbn-history a.dbn-current{color:var(--accent);border-color:var(--accent);font-weight:600}
+.dbn-history a.dbn-latest{color:var(--text);border-color:var(--text)}
+.dbn-history a.dbn-more{color:var(--muted);background:transparent;border-style:dashed}
+@media (max-width:600px){
+  .dbn-chrome{margin:-24px -16px 14px -16px;padding:8px 16px}
+  body{padding:16px !important}
+}
+</style>
+</head>
+<body>
+<nav class="dbn-chrome">
+  <div class="dbn-bar">
+    <a class="dbn-brand" href="./">Daily Big News<span class="dbn-dot">.</span><span class="dbn-tag">pre-market view</span></a>
+    <div class="dbn-lang"><a href="zh/">中文</a></div>
+  </div>
+  <div class="dbn-history"><a href="2026-05-24/" class="dbn-date dbn-current">2026-05-24</a></div>
+</nav>
+
+<div class="wrap">
+
+<header>
+  <h1>Daily Big News &mdash; Pre-Market View</h1>
+  <div class="meta">Generated Sun 2026-05-24 (refresh) &middot; Trading window Tue 2026-05-26 to Fri 2026-05-29 &middot; <i>US markets closed Mon 2026-05-25 (Memorial Day)</i></div>
+  
+  <div class="tape">
+    <span>S&amp;P 500: <b>7,473.47</b> (8th straight weekly gain)</span>
+    <span>Nasdaq: <b>26,343.97</b></span>
+    <span>NVDA: <b>$221.49</b> (intraday high Fri)</span>
+    <span>10Y UST: <b>4.56%</b> &middot; 20Y: <b>5.07%</b></span>
+    <span>Uranium: <b>$85/lb</b> &middot; CCJ: <b>$104.75</b></span>
+  </div>
+</header>
+
+<h2>Top 20 Market-Moving News (past 48h + key forward catalysts)</h2>
+<div class="news">
+
+  <div class="item"><div class="num">01</div><div>
+    <div class="headline">THU MAY 28 08:30 ET &mdash; Core PCE, Q1 GDP (2nd), Durable Goods, Jobless Claims hit together &mdash; the week&rsquo;s dominant catalyst</div>
+    <div class="body">Quadruple data drop. Mar Core PCE 3.2% YoY (headline 3.5%); a sub-3.1% print ignites melt-up into month-end and pulls forward Warsh-Fed easing pricing; 3.3%+ snaps the 8-week S&amp;P streak and risks a 20Y auction tail on Fri. Same morning includes first Q1 corporate-profits read and a cap-ex pulse via core capital goods.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">SPX</span><span class="tag t-stock">QQQ</span><span class="tag t-stock">TLT</span>
+      <span class="tag t-sector">Macro</span><span class="tag t-sector">Inflation</span><span class="tag t-sector">Rates</span>
+      <span class="tag t-neu">NEUTRAL (binary)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">02</div><div>
+    <div class="headline">NVIDIA Q1 FY27: $81.6B rev / $91B Q2 guide / $80B buyback &mdash; Rubin platform unveiled, Meta multi-gen GPU deal, IREN 5GW infra stake (May 20-23)</div>
+    <div class="body">Revenue +85% YoY; DC doubled; Huang flags $1T revenue potential by CY2027. NVDA hit $221.49 intraday Fri. Rubin claims 10x lower inference token cost vs Blackwell. Resets AI capex narrative and ends a 4-quarter post-print sell pattern.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">NVDA</span><span class="tag t-stock">META</span><span class="tag t-stock">IREN</span><span class="tag t-stock">TSM</span><span class="tag t-stock">AVGO</span>
+      <span class="tag t-sector">Semiconductors</span><span class="tag t-sector">AI Hardware</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">03</div><div>
+    <div class="headline">Trump signs FOUR nuclear executive orders (May 23) &mdash; NRC overhaul, fast-track advanced reactors, DOE/DoD pilot reactors target July 4, 2026 criticality, expanded US uranium</div>
+    <div class="body">Biggest structural policy catalyst of the weekend. Explicitly tied to AI data-center power demand. Ratepayer Protection Pledge signed by AMZN, GOOG, META, MSFT, OpenAI, ORCL, xAI. Direct fast-track for SMR licensing and federal-land pilots.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">CEG</span><span class="tag t-stock">VST</span><span class="tag t-stock">OKLO</span><span class="tag t-stock">SMR</span><span class="tag t-stock">NNE</span><span class="tag t-stock">BWXT</span><span class="tag t-stock">CCJ</span><span class="tag t-stock">LEU</span>
+      <span class="tag t-sector">Nuclear</span><span class="tag t-sector">Uranium</span><span class="tag t-sector">AI Power</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">04</div><div>
+    <div class="headline">&ldquo;Big Beautiful Bill&rdquo; clears House 215-214-1 (May 22) &mdash; heading to Trump&rsquo;s desk; deficit-widening tax + immigration funding</div>
+    <div class="body">Massie and Davidson defected; previously passed Senate 51-50 (Vance tiebreak). Long-end yields already pricing supply burden &mdash; 20Y at 5.07% on May 22 ahead of May 29 auction. Bearish duration, bullish gold and growth tax-cut beneficiaries.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">TLT</span><span class="tag t-stock">GLD</span>
+      <span class="tag t-sector">Fiscal</span><span class="tag t-sector">Long-End Rates</span><span class="tag t-sector">Tax Policy</span>
+      <span class="tag t-neg">NEGATIVE (duration)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">05</div><div>
+    <div class="headline">OKLO &times; META 1.2 GW Southern Ohio nuclear deal + BofA initiates Buy (May 22)</div>
+    <div class="body">Pre-construction 2026, first phase ~2030, scaling to 1.2 GW by 2034. Triple-catalyst stack with Trump EOs and July 4 DOE pilot target. OKLO is the cleanest political+commercial setup of the week.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">OKLO</span><span class="tag t-stock">META</span><span class="tag t-stock">SMR</span><span class="tag t-stock">NNE</span>
+      <span class="tag t-sector">Nuclear</span><span class="tag t-sector">SMR</span><span class="tag t-sector">AI Power</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">06</div><div>
+    <div class="headline">Kevin Warsh now Fed Chair; Powell exited May 15 &mdash; dovish tilt; June 16-17 FOMC is the first Warsh meeting</div>
+    <div class="body">Powell remained on the Board as governor citing institutional-independence concerns. Front-end and USD already pricing dovish lean. Combined with Thu PCE, sets up steepening: front-end bid, long-end pressured by BBB supply.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">DXY</span><span class="tag t-stock">TLT</span>
+      <span class="tag t-sector">Monetary Policy</span><span class="tag t-sector">FX</span><span class="tag t-sector">Rates</span>
+      <span class="tag t-pos">POSITIVE (risk)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">07</div><div>
+    <div class="headline">HBM/memory shortage extends through 2027 &mdash; Micron +38% (best week since 2008); SK Hynix capacity at zero, Samsung warns shortages last into 2027+</div>
+    <div class="body">HBM costs +30% in Q4 2025; NVDA reportedly cut RTX 50-series production 30-40% to redirect HBM to AI. Hyperscalers offering to fund fabs. Memory is now the bottleneck of the AI build &mdash; structural pricing power.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">MU</span><span class="tag t-stock">NVDA</span>
+      <span class="tag t-sector">Memory</span><span class="tag t-sector">Semiconductors</span><span class="tag t-sector">AI Hardware</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">08</div><div>
+    <div class="headline">Hyperscaler 2026 capex tracking $750-805B &mdash; Morgan Stanley raised to $805B (~2x 2025); ~90% of operating cash flow being plowed in</div>
+    <div class="body">~75% AI-related (~$450B). GOOGL $175-185B, AMZN $200B, META $115-135B all guided dramatically above consensus. Anthropic separately announced $50B US AI infrastructure (Texas + NY with Fluidstack). Unprecedented capital intensity.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">GOOGL</span><span class="tag t-stock">AMZN</span><span class="tag t-stock">META</span><span class="tag t-stock">MSFT</span><span class="tag t-stock">ORCL</span><span class="tag t-stock">NVDA</span><span class="tag t-stock">AVGO</span>
+      <span class="tag t-sector">AI Capex</span><span class="tag t-sector">Cloud</span><span class="tag t-sector">AI Hardware</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">09</div><div>
+    <div class="headline">NextEra &times; Dominion $420B mega-merger (announced May 18) &mdash; world&rsquo;s largest regulated utility, 130 GW large-load (AI) pipeline; multiple Form 425 filings May 22</div>
+    <div class="body">0.8138 NEE/D ratio. Close in 12-18 months pending FERC/Virginia SCC. Merger-arb opportunity in D; consolidation read-through to SO/DUK/AEP. Confirms utilities as the &ldquo;picks-and-shovels&rdquo; play on AI power demand.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">NEE</span><span class="tag t-stock">D</span><span class="tag t-stock">SO</span><span class="tag t-stock">DUK</span><span class="tag t-stock">AEP</span>
+      <span class="tag t-sector">Utilities</span><span class="tag t-sector">AI Power</span><span class="tag t-sector">M&amp;A</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">10</div><div>
+    <div class="headline">Wed close earnings cluster: Salesforce (CRM), Marvell (MRVL), HP, Autodesk &mdash; SaaS sentiment + AI silicon read-through</div>
+    <div class="body">CRM cons EPS $3.13 (+21% YoY), rev $11.05B (+12%); MRVL cons EPS $0.79, rev $2.4B (+26%). CRM is the SaaSpocalypse proxy &mdash; Workday&rsquo;s cautious guide is a yellow flag. MRVL just won part of Google&rsquo;s next-gen TPU work, ending AVGO&rsquo;s monopoly &mdash; beat = structural re-rate.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">CRM</span><span class="tag t-stock">MRVL</span><span class="tag t-stock">HPQ</span><span class="tag t-stock">ADSK</span><span class="tag t-stock">AVGO</span>
+      <span class="tag t-sector">AI Software</span><span class="tag t-sector">Semiconductors</span><span class="tag t-sector">Custom Silicon</span>
+      <span class="tag t-neu">NEUTRAL (binary)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">11</div><div>
+    <div class="headline">Marvell wins portion of Google&rsquo;s next-gen TPU silicon &mdash; ends Broadcom-only flagship monopoly</div>
+    <div class="body">Dual-sourcing structural shift: AVGO retains ~70% custom AI accelerator share but the moat narrative cracks. MRVL guidance raise on Wed PM print would confirm and re-rate; AVGO faces the first credible competitive pressure since 2023.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">MRVL</span><span class="tag t-stock">AVGO</span><span class="tag t-stock">GOOGL</span>
+      <span class="tag t-sector">Custom Silicon</span><span class="tag t-sector">Semiconductors</span>
+      <span class="tag t-pos">POSITIVE (MRVL)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">12</div><div>
+    <div class="headline">US-China post-summit follow-through: $17B/yr ag, 200 Boeing jets, China accepts prior Section 301 levels (May 18-20)</div>
+    <div class="body">Bessent: China accepts restoration of prior tariff levels &ldquo;as long as they don&rsquo;t go higher.&rdquo; MOFCOM reaffirms tariff cap. Macro risk-on positive; concrete tailwind for BA, ag, and rare-earth tied semis. US side has not yet formally cut duties.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">BA</span><span class="tag t-stock">DE</span><span class="tag t-stock">ADM</span>
+      <span class="tag t-sector">Trade</span><span class="tag t-sector">Industrials</span><span class="tag t-sector">Materials</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">13</div><div>
+    <div class="headline">Vistra +4.82% Fri to $156.27; Morgan Stanley PT raised to $212 &mdash; Texas IPP riding AI-power bid</div>
+    <div class="body">Q1 EBITDA +20% YoY; continued tailwind from Meta and Amazon long-term PPAs. CEG/TLN moved in sympathy. Trump nuclear EOs amplify the structural fleet-value case. Risk: ERCOT 2026 summer peak cut to 90.5-98 GW (vs 112 GW prelim) is a near-term Texas headwind.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">VST</span><span class="tag t-stock">CEG</span><span class="tag t-stock">TLN</span><span class="tag t-stock">NRG</span>
+      <span class="tag t-sector">IPP</span><span class="tag t-sector">AI Power</span><span class="tag t-sector">Utilities</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">14</div><div>
+    <div class="headline">Anthropic announces $50B US AI infrastructure investment (datacenters with Fluidstack in TX + NY)</div>
+    <div class="body">~800 permanent + 2,400 construction jobs; sites coming online throughout 2026. Reinforces AMZN-Anthropic flywheel ($100B Trainium deal halo) and signals frontier-lab capex independence. Indirect positive for NVDA/AVGO/MRVL custom silicon.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">AMZN</span><span class="tag t-stock">NVDA</span><span class="tag t-stock">AVGO</span>
+      <span class="tag t-sector">AI Infrastructure</span><span class="tag t-sector">AI Software</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">15</div><div>
+    <div class="headline">Applied Digital signs $7.5B / 300 MW hyperscaler lease at Polaris Forge 3 (North Dakota, May 22)</div>
+    <div class="body">Validates gigawatt-scale data-center pricing and demand. Read-through to power suppliers and grid build-out (NRG/VST/CEG, GEV, ETN). Confirms that lease pricing keeps stepping higher.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">APLD</span><span class="tag t-stock">NRG</span><span class="tag t-stock">GEV</span><span class="tag t-stock">ETN</span>
+      <span class="tag t-sector">Data Center</span><span class="tag t-sector">AI Power</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">16</div><div>
+    <div class="headline">SOX +60% in six weeks; AVGO, MRVL, MU at 52-week highs; SOXX flirting with overbought</div>
+    <div class="body">Breadth is wide and the rally has institutional sponsorship; but extension into Thu PCE is the obvious tactical risk. MRVL +179% YoY; UBS raised PT, ATH $172.98. Trim AVGO into MRVL Wed print; carry MU/NVDA.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">SOXX</span><span class="tag t-stock">NVDA</span><span class="tag t-stock">AVGO</span><span class="tag t-stock">MRVL</span><span class="tag t-stock">MU</span>
+      <span class="tag t-sector">Semiconductors</span><span class="tag t-sector">AI Hardware</span>
+      <span class="tag t-pos">POSITIVE (extended)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">17</div><div>
+    <div class="headline">20-Year Treasury auction Fri May 29 &mdash; yield 5.07% (May 22); first auction after BBB House passage</div>
+    <div class="body">Bond-market verdict on deficit-widening fiscal. A tail (yield > WI) caps SPX rally and pressures long-duration equities into month-end. Strong auction unlocks one more leg. Watch indirect bid &mdash; foreign demand is the swing factor.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">TLT</span><span class="tag t-stock">TBT</span>
+      <span class="tag t-sector">Rates</span><span class="tag t-sector">Fiscal</span><span class="tag t-sector">Supply</span>
+      <span class="tag t-neg">NEGATIVE (duration)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">18</div><div>
+    <div class="headline">Ross Stores Q1 blowout (EPS $2.02 vs $1.68, sales +21% YoY, FY guide raised); Intuit beat + $3B buyback (May 21)</div>
+    <div class="body">Off-price &ldquo;trade-down&rdquo; consumer alive and well; opposite read to Walmart/Target cautious tones. INTU&rsquo;s $3B authorization is a meaningful capital-return signal. Sets a constructive late-cycle consumer crosswind into Tue Consumer Confidence.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">ROST</span><span class="tag t-stock">INTU</span><span class="tag t-stock">TJX</span><span class="tag t-stock">BURL</span>
+      <span class="tag t-sector">Off-Price Retail</span><span class="tag t-sector">SaaS</span>
+      <span class="tag t-pos">POSITIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">19</div><div>
+    <div class="headline">Workday cautious Q2 guide &mdash; first overt sign of enterprise SaaS demand wobble; read-through to CRM Wed close</div>
+    <div class="body">Beat Q1 top/bottom but shares slipped on guide. Agentic-AI cannibalization narrative gains fresh data point. CRM print Wed PM becomes the binary catalyst for the entire SaaS complex into June.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">WDAY</span><span class="tag t-stock">CRM</span><span class="tag t-stock">NOW</span><span class="tag t-stock">ADBE</span>
+      <span class="tag t-sector">Enterprise SaaS</span><span class="tag t-sector">AI Software</span>
+      <span class="tag t-neg">NEGATIVE</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">20</div><div>
+    <div class="headline">Dell + Costco report Thu May 28 &mdash; AI-server backlog inflection meets consumer health gauge; lands SAME morning as Core PCE</div>
+    <div class="body">DELL: AI server backlog # is the AI-capex confirmation print. COST: consumer-health gauge; valuation extended. Stacked with the data drop = Thursday is the highest-vol session of the week. Plan exits before 4 PM.</div>
+    <div class="tagrow">
+      <span class="tag t-stock">DELL</span><span class="tag t-stock">COST</span><span class="tag t-stock">SMCI</span><span class="tag t-stock">HPE</span>
+      <span class="tag t-sector">AI Server</span><span class="tag t-sector">Consumer Staples</span>
+      <span class="tag t-neu">NEUTRAL (binary)</span>
+    </div>
+  </div></div>
+
+</div>
+
+<h2>Macroeconomic Calendar &mdash; Next 48-72 Hours</h2>
+<table class="cal">
+  <thead><tr><th>Day</th><th>Time (ET)</th><th>Release</th><th>Importance</th><th>Why It Matters</th></tr></thead>
+  <tbody>
+    <tr><td>Mon May 25</td><td>&mdash;</td><td>Memorial Day &mdash; US markets closed</td><td class="imp-low">&mdash;</td><td>Bond &amp; equity markets closed; thin overseas liquidity.</td></tr>
+    <tr><td>Tue May 26</td><td>09:00</td><td>S&amp;P/Case-Shiller HPI (Mar), FHFA HPI</td><td class="imp-med">Medium</td><td>Affordability-driven housing slowdown gauge.</td></tr>
+    <tr><td>Tue May 26</td><td>10:00</td><td>Conference Board Consumer Confidence (May)</td><td class="imp-high">HIGH</td><td>Prior 92.8. Sub-90 = sell discretionary/buy duration. Above 95 = risk-on continuation.</td></tr>
+    <tr><td>Tue May 26</td><td>10:30</td><td>Dallas Fed Manufacturing Survey</td><td class="imp-low">Low</td><td>Energy-belt manufacturing pulse.</td></tr>
+    <tr><td>Wed May 27</td><td>10:00</td><td>New Home Sales (Apr) &middot; Richmond Fed Mfg</td><td class="imp-med">Medium</td><td>Housing demand cross-check.</td></tr>
+    <tr><td>Wed May 27</td><td>16:00+</td><td>Earnings: CRM, MRVL, HPQ, ADSK</td><td class="imp-high">HIGH</td><td>SaaS &amp; custom-silicon read-through; AVGO de-rating trigger if MRVL beats.</td></tr>
+    <tr><td><b>Thu May 28</b></td><td><b>08:30</b></td><td><b>Q1 GDP 2nd &middot; Durable Goods &middot; Initial Claims &middot; Apr PCE / Core PCE</b></td><td class="imp-high">VERY HIGH</td><td><b>Week&rsquo;s dominant catalyst.</b> Core PCE last 3.2% YoY. &lt;3.1% = melt-up; &gt;3.3% breaks the 8-wk streak.</td></tr>
+    <tr><td>Thu May 28</td><td>16:00+</td><td>Earnings: DELL, COST</td><td class="imp-high">HIGH</td><td>AI-server backlog + consumer health on highest-vol day.</td></tr>
+    <tr><td>Thu May 28</td><td>19:30</td><td>Tokyo CPI (May) &mdash; Japan</td><td class="imp-med">Medium-High</td><td>BOJ rate-path signal.</td></tr>
+    <tr><td>Fri May 29</td><td>09:45</td><td>Chicago PMI</td><td class="imp-med">Medium</td><td>Manufacturing read into month-end.</td></tr>
+    <tr><td>Fri May 29</td><td>10:00</td><td>U. Michigan Sentiment (Final) &middot; inflation expectations</td><td class="imp-med">Medium-High</td><td>Inflation-expectations tail risk.</td></tr>
+    <tr><td>Fri May 29</td><td>13:00</td><td><b>20-Year Treasury auction</b></td><td class="imp-high">HIGH</td><td>First auction after BBB House passage; yield 5.07% pre-auction. Tail = duration negative.</td></tr>
+  </tbody>
+</table>
+
+<h2>Analytics &amp; Directional Conclusions (3-5 day horizon)</h2>
+
+<div class="concl">
+  <h3>Overall Market Stance</h3>
+  <p><b>Constructively risk-on with a hard pivot at Thursday 08:30 ET.</b> The tape is carried by an AI/nuclear/power super-cycle (NVDA print, Rubin, Trump nuclear EOs, OKLO-Meta) and dovish Fed transition under Warsh, offset by deficit-widening fiscal (BBB) pressuring the long end. Position long AI semis, nuclear/IPPs, and quality mega-cap tech into Wed; <b>trim / hedge index beta Wed close ahead of Thu&rsquo;s Core PCE quadruple-print</b>. Sub-3.1% PCE = melt-up into month-end; 3.3%+ snaps the SOX rally and risks a Fri 20Y auction tail. Net bias: long tech / power, short duration, short consumer cyclicals.</p>
+
+  <h3>Index &amp; Macro Views</h3>
+  <table>
+    <thead><tr><th>Instrument</th><th>Direction</th><th>Conviction</th><th>Rationale</th></tr></thead>
+    <tbody>
+      <tr><td>S&amp;P 500</td><td class="dir-b">Bullish</td><td>Medium</td><td>Earnings breadth (ROST, INTU) + Warsh dovish lean; capped by Thu PCE risk.</td></tr>
+      <tr><td>Nasdaq 100</td><td class="dir-b">Bullish</td><td>High</td><td>NVDA $91B guide + $80B buyback + SOX +60% / 6wks &mdash; leadership intact.</td></tr>
+      <tr><td>Russell 2000</td><td class="dir-n">Neutral</td><td>Low</td><td>Helped by rate-cut hopes, hurt by 5%+ long-end yields.</td></tr>
+      <tr><td>10Y UST</td><td class="dir-s">Higher (price ↓)</td><td>Medium</td><td>BBB deficit + sticky PCE risk &gt; Warsh dovishness at belly.</td></tr>
+      <tr><td>30Y UST</td><td class="dir-s">Higher (price ↓)</td><td>High</td><td>20Y auction Thu/Fri, fiscal supply, term premium rebuild.</td></tr>
+      <tr><td>DXY</td><td class="dir-s">Lower</td><td>Medium</td><td>Warsh-dove + US-China d&eacute;tente + Russia/Ukraine deal narrative.</td></tr>
+      <tr><td>Gold</td><td class="dir-b">Bullish</td><td>High</td><td>Dovish Fed + fiscal blowout + Iran tail = structural bid.</td></tr>
+      <tr><td>WTI Crude</td><td class="dir-n">Neutral-Bearish</td><td>Medium</td><td>Hormuz impaired but Russia deal + China demand cap upside; $60-66 range.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Single-Name Calls</h3>
+  <table>
+    <thead><tr><th>Ticker</th><th>Direction</th><th>Conv.</th><th>Rationale &amp; Risk</th></tr></thead>
+    <tbody>
+      <tr><td>NVDA</td><td class="dir-b">Bullish</td><td>High</td><td>$91B guide, Rubin, Meta deal, $80B buyback. <i>Risk: $221 extension exhaustion into PCE.</i></td></tr>
+      <tr><td>AVGO</td><td class="dir-n">Neutral / Trim</td><td>Medium</td><td>52-w high but MRVL TPU win cracks Google monopoly &mdash; trim, don&rsquo;t chase.</td></tr>
+      <tr><td>MRVL</td><td class="dir-b">Bullish</td><td>High</td><td>Google TPU dual-source = structural re-rate; Wed PM earnings is the catalyst.</td></tr>
+      <tr><td>TSM</td><td class="dir-b">Bullish</td><td>High</td><td>HBM + leading-edge demand; sole foundry beneficiary of capex surge.</td></tr>
+      <tr><td>AMD</td><td class="dir-b">Bullish</td><td>Medium</td><td>2nm EPYC ramp + hyperscaler capex. <i>Risk: Rubin overshadow.</i></td></tr>
+      <tr><td>MU</td><td class="dir-b">Bullish</td><td>High</td><td>+38% best week since &rsquo;08; HBM tight to 2027. <i>Risk: profit-taking.</i></td></tr>
+      <tr><td>MSFT</td><td class="dir-b">Bullish</td><td>High</td><td>OpenAI/capex anchor; safe Thu hedge.</td></tr>
+      <tr><td>GOOGL</td><td class="dir-b">Bullish</td><td>Medium</td><td>Gemini Spark + TPU build. <i>Risk: antitrust overhang.</i></td></tr>
+      <tr><td>AMZN</td><td class="dir-b">Bullish</td><td>High</td><td>$225B AI chip backlog + AWS reaccel; cleanest mega-cap setup.</td></tr>
+      <tr><td>ORCL</td><td class="dir-b">Bullish</td><td>Medium</td><td>OCI tailwind; stretched into prints.</td></tr>
+      <tr><td>META</td><td class="dir-b">Bullish</td><td>High</td><td>OKLO 1.2GW deal + NVDA multi-gen GPU commitment validates capex.</td></tr>
+      <tr><td>CRM</td><td class="dir-s">Bearish into print</td><td>Medium</td><td>WDAY cautious guide = SaaS demand wobble. Wed PM binary.</td></tr>
+      <tr><td>PLTR</td><td class="dir-b">Bullish</td><td>Medium</td><td>+85% rev, +71% FY guide. <i>Risk: valuation.</i></td></tr>
+      <tr><td>CEG</td><td class="dir-b">Bullish</td><td>High</td><td>Pure-play nuclear PPA beneficiary of Trump EOs.</td></tr>
+      <tr><td>VST</td><td class="dir-b">Bullish</td><td>High</td><td>MS PT $212; Texas IPP. ERCOT cut priced.</td></tr>
+      <tr><td>NRG</td><td class="dir-b">Bullish</td><td>Medium</td><td>EO halo; less levered than VST.</td></tr>
+      <tr><td>OKLO</td><td class="dir-b">Bullish</td><td>High</td><td>Meta 1.2GW + BofA Buy + Jul &rsquo;26 DOE pilot = catalyst stack.</td></tr>
+      <tr><td>SMR</td><td class="dir-b">Bullish</td><td>High</td><td>NRC overhaul = direct SMR fast-track.</td></tr>
+      <tr><td>CCJ</td><td class="dir-b">Bullish</td><td>High</td><td>U3O8 $85/lb, supply tight, EO tailwind.</td></tr>
+      <tr><td>D (Dominion)</td><td class="dir-b">Bullish</td><td>Medium</td><td>NEE merger arb + 130 GW DC pipeline.</td></tr>
+      <tr><td>NEE</td><td class="dir-b">Bullish</td><td>Medium</td><td>Merger accretion + regulated yield in dovish Fed.</td></tr>
+      <tr><td>COST</td><td class="dir-n">Neutral</td><td>Medium</td><td>ROST beat is off-price, not warehouse; Thu print binary.</td></tr>
+      <tr><td>DELL</td><td class="dir-b">Bullish</td><td>High</td><td>AI server backlog inflection; Thu PM print is the catalyst.</td></tr>
+      <tr><td>WMT</td><td class="dir-s">Bearish / Avoid</td><td>Medium</td><td>Consumer Confidence risk Tue + valuation full.</td></tr>
+      <tr><td>XOM</td><td class="dir-n">Neutral</td><td>Low</td><td>Crude rangebound; dividend floor only.</td></tr>
+      <tr><td>LMT</td><td class="dir-s">Bearish / Short</td><td>Medium</td><td>Russia/Ukraine deal + Iran ceasefire = defense de-rate risk.</td></tr>
+    </tbody>
+  </table>
+
+  <h3>Top 3 Long Ideas (3-5 day)</h3>
+  <ul>
+    <li class="pick"><b>OKLO:</b> Trump nuclear EOs + Meta 1.2 GW deal + BofA Buy initiation &mdash; cleanest political+commercial catalyst stack of the week. Size as story stock.</li>
+    <li class="pick"><b>MRVL:</b> Google TPU win is a structural shift, not a quarter. Wed PM earnings should confirm and re-rate; AVGO becomes the funding leg.</li>
+    <li class="pick"><b>NVDA:</b> Rubin unveil + $80B buyback + $91B guide is unfinished business. Ride to month-end mark-up, but trim half pre-PCE.</li>
+  </ul>
+
+  <h3>Top 2 Short / Avoid</h3>
+  <ul>
+    <li class="pick"><b>LMT:</b> Russia/Ukraine deal + Iran ceasefire compress defense premium; clean rotation funding source.</li>
+    <li class="pick"><b>CRM into Wed PM:</b> Workday&rsquo;s cautious guide + stretched setup + agentic-AI overhang = asymmetric downside on any soft guide.</li>
+  </ul>
+
+  <h3>Risk Management Checkpoints</h3>
+  <ul>
+    <li><b>Tue 10:00 ET</b> &mdash; Consumer Confidence. Sub-90 = sell WMT/COST/discretionary, buy duration. Above 95 = risk-on continuation.</li>
+    <li><b>Wed 16:00+ ET</b> &mdash; CRM/MRVL/HPQ/ADSK cluster. MRVL beat = AVGO trim trigger; CRM guide is software-sector tell. Trim index longs into 3:50 PM.</li>
+    <li><b>Thu 08:30 ET</b> &mdash; <b>Core PCE + GDP + Durables + Claims quadruple drop.</b> Sub-3.1% = SOX/gold/nuclear ripfest, 30Y bid. Above 3.3% = SOX air pocket, 30Y &gt; 5.15%, 20Y auction risk amplified.</li>
+    <li><b>Thu 16:00+ ET</b> &mdash; DELL/COST. AI-server backlog confirmation; consumer-health gauge.</li>
+    <li><b>Fri 13:00 ET</b> &mdash; <b>20-Year Treasury auction.</b> Tail = late-day equity fade into month-end. Strong = unlocks one more leg.</li>
+  </ul>
+
+  <h3>Carry Into Friday Close</h3>
+  <p>Long NVDA / MRVL / OKLO / CEG / MU; long gold; short LMT and CRM (post-print); short 30Y duration (TLT puts). Hedge: half-size index puts through Thu open.</p>
+</div>
+
+<div class="footnote">
+  Automated daily report &middot; 2026-05-24 refresh &middot; All figures synthesized from public web sources (CNBC, Bloomberg, Reuters, SEC, BEA, BLS, NRC, DOE, Treasury, Conference Board, Morgan Stanley, BofA, UBS, Anthropic, NVIDIA IR, Oklo IR, ERCOT, Utility Dive, NPR, The Register, Tom&rsquo;s Hardware, Fortune, Yahoo Finance, Trading Economics, Seeking Alpha, CB Insights, Benzinga, Newsquawk, CNN, Earnings Whispers, Roll Call, Polymarket, Schwab Network). Informational research, not investment advice. Position sizing and risk management remain the user&rsquo;s responsibility.
+</div>
+
+</div>
+
+</body>
+</html>
