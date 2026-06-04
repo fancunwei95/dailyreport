@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>Daily Big News — 2026-06-04</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Daily pre-market read of major U.S. equity-impacting news. Updated each morning.">
+<meta name="theme-color" content="#0f1419">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Daily Big News">
+<link rel="manifest" href="../../manifest.json">
+<link rel="apple-touch-icon" href="../../icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="../../icon-512.png">
+<style>
+  :root{
+    --bg:#0f1419;--card:#1a1f2e;--border:#2d3748;--text:#e2e8f0;--muted:#94a3b8;
+    --pos:#10b981;--neg:#ef4444;--neu:#f59e0b;--accent:#60a5fa;--hi:#a78bfa;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  .wrap{max-width:1100px;margin:0 auto}
+  header{border-bottom:1px solid var(--border);padding-bottom:16px;margin-bottom:24px}
+  h1{margin:0 0 4px 0;font-size:26px}
+  h2{margin:28px 0 12px 0;font-size:20px;color:var(--accent);border-left:3px solid var(--accent);padding-left:10px}
+  h3{margin:18px 0 8px 0;font-size:16px;color:var(--hi)}
+  .meta{color:var(--muted);font-size:13px}
+  .tape{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:13px;color:var(--muted)}
+  .tape span b{color:var(--text)}
+  .lang-toggle{font-size:12px;margin-top:8px}
+  .lang-toggle a{color:var(--accent);text-decoration:none;border:1px solid var(--border);padding:3px 10px;border-radius:4px}
+  .news{display:grid;grid-template-columns:1fr;gap:12px}
+  .item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:grid;grid-template-columns:36px 1fr;gap:12px}
+  .num{font-size:22px;font-weight:700;color:var(--accent);line-height:1.1}
+  .headline{font-size:15px;font-weight:600;margin:0 0 6px 0}
+  .body{font-size:13.5px;color:var(--text);margin:0 0 8px 0}
+  .tagrow{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:11px;padding:3px 8px;border-radius:999px;font-weight:600;letter-spacing:.3px}
+  .t-sector{background:#1e293b;color:#cbd5e1;border:1px solid #334155}
+  .t-stock{background:#172554;color:#bfdbfe;border:1px solid #1e3a8a}
+  .t-pos{background:rgba(16,185,129,.15);color:var(--pos);border:1px solid var(--pos)}
+  .t-neg{background:rgba(239,68,68,.15);color:var(--neg);border:1px solid var(--neg)}
+  .t-neu{background:rgba(245,158,11,.15);color:var(--neu);border:1px solid var(--neu)}
+  table.cal{width:100%;border-collapse:collapse;font-size:13px;background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  table.cal th,table.cal td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--border)}
+  table.cal th{background:#111827;color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  table.cal tr:last-child td{border-bottom:none}
+  .imp-high{color:var(--neg);font-weight:700}
+  .imp-med{color:var(--neu);font-weight:600}
+  .imp-low{color:var(--muted)}
+  .concl{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-top:14px}
+  .concl table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  .concl th,.concl td{padding:7px 10px;border-bottom:1px solid var(--border);text-align:left}
+  .concl th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase}
+  .dir-b{color:var(--pos);font-weight:600}
+  .dir-s{color:var(--neg);font-weight:600}
+  .dir-n{color:var(--neu);font-weight:600}
+  .pick{margin:6px 0;padding-left:18px}
+  .footnote{font-size:11px;color:var(--muted);margin-top:24px;padding-top:14px;border-top:1px solid var(--border)}
+
+
+.dbn-chrome{position:sticky;top:0;z-index:10;background:rgba(15,20,25,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);margin:-24px -24px 18px -24px;padding:10px 24px}
+.dbn-bar{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.dbn-brand{font-weight:700;font-size:16px;color:var(--text);text-decoration:none;letter-spacing:.2px}
+.dbn-brand .dbn-dot{color:var(--accent)}
+.dbn-tag{font-size:11px;color:var(--muted);margin-left:8px}
+.dbn-lang a{color:var(--accent);text-decoration:none;font-size:12px;border:1px solid var(--border);padding:4px 10px;border-radius:999px}
+.dbn-history{max-width:1100px;margin:8px auto 0 auto;display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.dbn-history::-webkit-scrollbar{height:6px}
+.dbn-history::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.dbn-history a{flex:0 0 auto;font-size:12px;color:var(--muted);text-decoration:none;border:1px solid var(--border);padding:4px 10px;border-radius:6px;white-space:nowrap;background:var(--card)}
+.dbn-history a.dbn-current{color:var(--accent);border-color:var(--accent);font-weight:600}
+.dbn-history a.dbn-latest{color:var(--text);border-color:var(--text)}
+.dbn-history a.dbn-more{color:var(--muted);background:transparent;border-style:dashed}
+@media (max-width:600px){
+  .dbn-chrome{margin:-24px -16px 14px -16px;padding:8px 16px}
+  body{padding:16px !important}
+}
+</style>
+</head>
+<body>
+<nav class="dbn-chrome">
+  <div class="dbn-bar">
+    <a class="dbn-brand" href="../../zh/">Daily Big News<span class="dbn-dot">.</span><span class="dbn-tag">pre-market view</span></a>
+    <div class="dbn-lang"><a href="../">English</a></div>
+  </div>
+  <div class="dbn-history"><a href="../../zh/" class="dbn-latest">↑ Latest</a><a href="../../2026-06-04/zh/" class="dbn-date dbn-current">2026-06-04</a><a href="../../2026-06-02/zh/" class="dbn-date">2026-06-02</a><a href="../../2026-06-01/zh/" class="dbn-date">2026-06-01</a><a href="../../2026-05-26/zh/" class="dbn-date">2026-05-26</a><a href="../../2026-05-25/zh/" class="dbn-date">2026-05-25</a><a href="../../2026-05-24/zh/" class="dbn-date">2026-05-24</a></div>
+</nav>
+
+<div class="wrap">
+
+<header>
+  <h1>每日重要新闻 &mdash; 盘前更新</h1>
+  <div class="meta">生成于周四 2026-06-04 (AVGO/CRWD 双弹后, ADP/ISM 服务业偏热, 距非农 T-1) &middot; <i>交易窗口 周四 2026-06-04 至 周一 2026-06-08</i></div>
+  
+  <div class="tape">
+    <span><b>博通 AVGO Q2:</b> 营收 $22.19B (+48%), AI $10.8B (+143%), Q3 指引 $29.4B / AI $16.0B &mdash; <b>盘后跌 -7 至 -13%</b> (未上调 SAM)</span>
+    <span><b>CRWD Q1 FY27:</b> 营收 $1.39B / EPS $1.10 超预期; 新增 ARR $256M (低于 $275M 私下预期); <b>7/2 进行 4 拆 1</b>; <b>盘后跌 -9 至 -11%</b></span>
+    <span><b>ADP 5月 +12.2万</b> 高于 +11万 预期; <b>ISM 服务业 54.5</b> (支付价格 <b>71.3</b> 创 2022年8月来新高; 就业 47.9)</span>
+    <span>周三收盘: <b>SPX 7,553.68 (-0.74%)</b>, 纳斯达克 26,853.98 (-0.89%), 道指 50,687.07 (-1.21%) &middot; 9 日连涨终结</span>
+    <span><b>10年期 4.48%</b>, 30年期试探 <b>5.0%</b>; DXY <b>99.5</b> 创 4 月以来新高</span>
+    <span><b>WTI $96.02 (+2.41%)</b> &middot; 布伦特 $97.81 &middot; 黄金 $4,440 (-1.11%)</span>
+    <span><b>霍尔木兹海峡封锁第 94 天</b>: 仅 ~10 艘船通行 (正常 ~95); 全球 20% 石油供应被卡</span>
+    <span><b>SpaceX IPO 今日 (周四) 启动路演</b>: $135/股, 募 $75B, 估值 $1.75T; 6/11 定价, 6/12 纳斯达克挂牌 代码 SPCX</span>
+    <span><b>周五非农共识 +6.2万 / 失业率 4.3% / AHE +0.3%</b>; 联储 6/6 周六开始静默期</span>
+    <span>Warsh 主席首份褐皮书: 伊朗外溢通胀传导; 消费者承压上升</span>
+  </div>
+</header>
+
+<h2>市场前 20 重要新闻 (过去 24 小时 + 关键前瞻催化剂)</h2>
+<div class="news">
+
+  <div class="item"><div class="num">01</div><div>
+    <div class="headline">博通 (AVGO) Q2 FY26 周三盘后 &mdash; 营收 <b>$22.19B (+48% 同比)</b> 略低于 $22.27B 预期; EPS <b>$2.44 vs $2.32</b>; <b>AI 半导体收入 $10.8B (+143% 同比, 约占总营收 49%)</b>; <b>Q3 指引 $29.4B (+84% 同比)</b> 超 $28.53B 预期 + <b>AI 半导体 $16.0B (>+200%)</b>; 软件业务不及预期; CEO Hock Tan 未上调 <b>$100B FY29 AI SAM 目标</b> &mdash; 盘后<b>大跌 7-13%</b></div>
+    <div class="body">"消息出货"。AVGO 交出了 AI 三位数增长的亮眼数据,但在 MRVL/ARM/MCHP/STM Computex 周后,市场需要的是明确的 SAM 上调。软件部门 (+9% 不及 $7.32B 预期) 加重压力。<b>周四开盘 AI 半导体板块情绪偏弱</b> &mdash; NVDA、MRVL、AMD、MU 预计同步承压。但 Q3 AI 营收<b>三倍同比增长</b>说明长期叙事完好 &mdash; 这是"建仓时机"问题,不是"基本面"问题。逢反弹做空,不追反弹。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">AVGO</span><span class="tag t-stock">NVDA</span><span class="tag t-stock">MRVL</span><span class="tag t-stock">AMD</span><span class="tag t-stock">MU</span><span class="tag t-stock">TSM</span>
+      <span class="tag t-sector">半导体</span><span class="tag t-sector">AI 硬件</span><span class="tag t-sector">定制芯片</span>
+      <span class="tag t-neg">利空 (AVGO); 板块混合</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">02</div><div>
+    <div class="headline">CrowdStrike (CRWD) Q1 FY27 周三盘后 &mdash; 营收 <b>$1.39B (+26% 同比)</b> 超 $1.36B; EPS <b>$1.10 vs $1.07</b>; <b>新增 ARR $256M (+32% 同比)</b> Q1 历史新高但低于 $275M 私下预期; ARR <b>$5.51B (+24%)</b>; 计费额 $1.35B (偏弱); FY27 营收指引上调至 $5.915-5.959B; <b>4 拆 1 拆股</b> 登记日 6/25, 7/2 拆股后交易; <b>盘后跌 -9 至 -11% (从 $747.61)</b></div>
+    <div class="body">CRWD 进入财报时 YTD 已涨 <b>+60-65%</b>,期权隐含波动率约 10.5%; 财报技术上是"超预期 + 上调",但未达买方门槛。计费弱 + 新增 ARR 处于预期区间中段 = 估值完美预期被打破。Falcon Flex ARR $1.9B (+99%) 和 NG-SIEM ARR >$600M 多年看仍偏多,但短期动量已被打破。传导: PANW (本已强势) 脱钩; ZS、S、FTNT 盘前情绪偏弱。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">CRWD</span><span class="tag t-stock">PANW</span><span class="tag t-stock">ZS</span><span class="tag t-stock">S</span><span class="tag t-stock">FTNT</span>
+      <span class="tag t-sector">网络安全</span><span class="tag t-sector">AI 软件</span><span class="tag t-sector">SaaS</span>
+      <span class="tag t-neg">利空</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">03</div><div>
+    <div class="headline">ADP 5月 <b>偏热 +12.2万</b> 高于 +11万 预期 (4月修正为 <b>+10.5万</b>); 创 2025年1月以来最强; ISM 服务业 5月 <b>54.5 vs 53.8 预期</b> (3个月高点); 商业活动 57.7; 新订单 57.3; <b>就业 47.9</b> (连续3个月收缩); <b>支付价格 71.3 &mdash; 2022年8月以来最高</b>; 标普服务业 PMI 最终值 50.9; 工厂订单 4月 <b>+4.8%</b></div>
+    <div class="body">本周非农之前最关键的宏观数据。ADP-vs-NFP 交叉信号今早向 ADP 端解读 (NFP 共识仅 +6.2万)。支付价格 <b>71.3</b> 是 Warsh 政策制定者头条 &mdash; "伊朗外溢通胀已经体现在数据中"。OIS 6月降息几率跌破 5%; <b>12月加息几率升至 40% (一月前仅 3%)</b>。<b>10 年期 +4 bp 至 4.48%</b>; 30 年期试探 5.0%。债券熊市格局延续至非农,除非出现明显疲软。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">TLT</span><span class="tag t-stock">DXY</span><span class="tag t-stock">IWM</span><span class="tag t-stock">GLD</span>
+      <span class="tag t-sector">宏观</span><span class="tag t-sector">就业</span><span class="tag t-sector">利率</span><span class="tag t-sector">通胀</span>
+      <span class="tag t-neg">利空债券与小盘</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">04</div><div>
+    <div class="headline">联储褐皮书 (Warsh 主席首份) &mdash; 12 个辖区中 <b>10 个</b>活动小幅至温和扩张; 就业稳定; <b>因伊朗战争能源外溢通胀上升</b> (运输、包装、食品、化肥); 消费者承压 &mdash; <b>信用卡使用增加, 零售访问减少</b>, 需求向必需品倾斜; 为 <b>6/16-17 FOMC</b> (Warsh 首次主持) 定调</div>
+    <div class="body">Warsh 鹰派立场已知,褐皮书明确提出伊朗-通胀叙事 + 消费者承压基调 &mdash; 为他在周五任何疲软非农引发的反弹中表达鹰派立场作铺垫。当前联储定价: 6/7 月不变概率 >80%, 2026 年任何会议降息几率 <3%, <b>12 月加息几率 40%</b>。久期交易本周无政策支撑; 只有非农 <+4万 才能打破格局。滞胀叠加重新定价。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">TLT</span><span class="tag t-stock">SPX</span><span class="tag t-stock">DXY</span><span class="tag t-stock">GLD</span>
+      <span class="tag t-sector">货币政策</span><span class="tag t-sector">宏观</span><span class="tag t-sector">通胀</span>
+      <span class="tag t-neg">债券利空; 股票中性</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">05</div><div>
+    <div class="headline">周三收盘 &mdash; <b>标普 500 7,553.68 (-0.74%)</b> 终结 9 日连涨; 纳斯达克 <b>26,853.98 (-0.89%)</b>; 道指 <b>50,687.07 (-1.21%)</b>; <b>10年 4.48% (上行), 30年 接近 5.00%</b>; DXY <b>99.4-99.54</b> 创 4月以来新高; <b>WTI $96.02 (+2.41%)</b>, 布伦特 $97.81; <b>黄金 $4,440 (-1.11%)</b> 受真实利率压力</div>
+    <div class="body">前期反弹的首次真实派发日。前 9 日连涨中,市场内部宽度已经走弱; 周三确认。非农前格局: 利率上行、美元上行、黄金下行 &mdash; 标准的鹰派增长担忧前奏。叠加 AVGO/CRWD 拖累,股指开盘防御。罗素 2000 受打击最重 (30年 5% + ISM 就业 47.9 = 小盘股克星)。VIX 今早预计买盘至 19-22。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">SPX</span><span class="tag t-stock">QQQ</span><span class="tag t-stock">IWM</span><span class="tag t-stock">VIX</span>
+      <span class="tag t-sector">指数</span><span class="tag t-sector">宏观</span><span class="tag t-sector">风险</span>
+      <span class="tag t-neg">近期利空</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">06</div><div>
+    <div class="headline">WTI <b>$96.02 (+2.41%)</b>, 布伦特 <b>$97.81</b>; <b>霍尔木兹海峡封锁第 94 天</b> &mdash; 仅约 10 艘船通行 vs 正常 95 艘, <b>全球 20% 石油供应被卡</b>; 雪佛龙/埃克森 CEO 公开警告 6-7月仍有上行风险; 有分析师预测 <b>布伦特 $150-160</b> 库存底点情景; <b>OPEC+ 6/7 周六部长会议</b> (6月 +18.8万桶/日已批准)</div>
+    <div class="body">板块中基本面最干净 + 对利率正向敏感的标的。炼厂 3-2-1 裂解价差 YTD <b>从 $0.65 翻倍至 $1.65/加仑</b>; 4月约 $54/桶; <b>VLO YTD 总回报 +107%</b>; MPC Q4 利润率 $18.65/桶 同行最佳。伊朗外溢褐皮书使其成为滞胀友好型多头。风险: 霍尔木兹重新开放标题 (特朗普称即将) 引发盘中 WTI 5-7% 下跌。机械止损。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">CL=F</span><span class="tag t-stock">XOM</span><span class="tag t-stock">CVX</span><span class="tag t-stock">VLO</span><span class="tag t-stock">MPC</span><span class="tag t-stock">PSX</span><span class="tag t-stock">LMT</span><span class="tag t-stock">NOC</span>
+      <span class="tag t-sector">能源</span><span class="tag t-sector">炼油</span><span class="tag t-sector">地缘</span><span class="tag t-sector">国防</span>
+      <span class="tag t-pos">利多 (能源/国防)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">07</div><div>
+    <div class="headline">SpaceX IPO <b>今日 (周四 6/4) 启动路演</b> &mdash; 定价 <b>$135/股</b>, 5.556亿股 = <b>募 ~$75B</b>; <b>估值 $1.75T</b> (含绿鞋至多 $1.8T); 6/11 定价, 6/12 纳斯达克挂牌 <b>代码 SPCX</b>; 马斯克保留 82%+ 投票控制权; 主承 Goldman, 副承 MS/BofA/Citi/JPM; 2 倍历史最大 IPO; 估值约 94 倍 2025 年营收 ($18.67B); Morningstar 公允价值 $780B</div>
+    <div class="body">72 小时内第二个超大型 IPO (周日 Anthropic S-1 + SpaceX 路演)。资金流向单一标的吸纳风险偏好 &mdash; 投机性小盘 AI (ARKK, PLTR, NNE) 甚至部分 Mag-7 预计资金外流。xAI 现已并入 SpaceX (Colossus 1 $1.25B/月租给 Anthropic,支撑算力经济)。在已经偏紧的估值环境中新发 $750 亿股本是 Nasdaq 6/12 之前的边际供应风险。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">SPCX</span><span class="tag t-stock">ARKK</span><span class="tag t-stock">PLTR</span><span class="tag t-stock">GOOGL</span><span class="tag t-stock">NVDA</span>
+      <span class="tag t-sector">IPO 日历</span><span class="tag t-sector">AI 基础设施</span><span class="tag t-sector">航天</span>
+      <span class="tag t-neu">中性 (供应测试)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">08</div><div>
+    <div class="headline">英伟达 (NVDA) &mdash; 黄仁勋在 GTC 台北 / Computex 闭幕宣布 <b>Vera Rubin 已进入全面量产</b>; <b>NVL72 = 36 颗 Vera CPU + 72 颗 Rubin GPU</b>, 第六代 NVLink; <b>训练性能 3.5 倍 / 推理性能 5 倍</b> 优于 Blackwell; 推理成本降至 <b>Blackwell 的 1/7</b>; 单机架组装时间 <b>从 2 小时降至 5 分钟</b>; <b>GB300 NVL72 需求 "尤其强劲"</b> 至 Q3; <b>RTX Spark / N1X</b> (Arm + Blackwell + 128GB 统一内存) 秋季 2026 出货</div>
+    <div class="body">支撑整个 AI 资本开支周期的核心叙事继续验证。共识目标价 <b>$308.81</b> (Needham $270, Baird $500)。6/3 收盘约 $222.82 = 至共识隐含 ~38% 上行空间。AVGO 联动疲软提供入场机会。Vera Rubin 经济性 (推理成本 1/7) 即护城河 &mdash; OpenAI / Anthropic / SpaceX 作为 Vera 启动客户锁定叙事。多头观点: 即使 ASIC 份额升至 AI 服务器出货量 ~28%, NVDA 仍是年底最干净的大盘单一标的。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">NVDA</span><span class="tag t-stock">MRVL</span><span class="tag t-stock">ARM</span><span class="tag t-stock">MU</span><span class="tag t-stock">TSM</span>
+      <span class="tag t-sector">半导体</span><span class="tag t-sector">AI 硬件</span><span class="tag t-sector">数据中心</span>
+      <span class="tag t-pos">利多</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">09</div><div>
+    <div class="headline">Marvell (MRVL) 周二收 <b>$290.79 +32.5%</b>,因黄仁勋在 Computex 舞台上称 MRVL <b>"下一家万亿美元公司"</b>; NVDA <b>$20亿投资 + NVLink Fusion 联盟</b> (3/31 公布, 此次强化); ~<b>午盘前增加 $400 亿市值</b>; 互连业务 Q1 FY27 指引上调 <b>+70% 同比</b> (从 +50%); 定制芯片目标 <b>FY29 营收 >$10B</b>; 超大规模客户设计中标 (AWS/MSFT/GOOG) 量产中</div>
+    <div class="body">MRVL 是超大规模 ASIC + NVLink Fusion 最干净的二阶衍生。黄仁勋背书是整个 fabric / 互连生态的多年顺风 &mdash; ALAB (Scorpio X 系列 320 通道), CRDO (最新季度 +157% 增长), CDNS ($8B 积压), SNPS。若 MRVL >$310 部分获利; 持有核心仓位。AVGO 受挫消除了相对估值疑问,为该交易腾出空间。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">MRVL</span><span class="tag t-stock">ALAB</span><span class="tag t-stock">CRDO</span><span class="tag t-stock">CDNS</span><span class="tag t-stock">SNPS</span>
+      <span class="tag t-sector">定制芯片</span><span class="tag t-sector">AI fabric</span><span class="tag t-sector">互连</span>
+      <span class="tag t-pos">利多</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">10</div><div>
+    <div class="headline">ARM Holdings <b>+18% (延续 240% 三个月涨幅)</b> &mdash; RTX Spark/N1X 版税利好; CEO Rene Haas 称 <b>$15B 定制芯片营收目标 "提前数年完成"</b>; AGI CPU 已获 Meta/Oracle/ByteDance <b>>$20亿订单</b>; ARM 在 Computex 披露 <b>超大规模 CPU 份额突破 50%</b> &mdash; 相对 x86 的里程碑</div>
+    <div class="body">真正结构性 &mdash; ARM 与 SNPS/CDNS (EDA) 并列 AI 硅周期最干净的版税流。双向赢家: AI-PC (RTX Spark/N1X 配 30+ 款笔电秋季 2026) + DC-CPU (NVDA Vera, 定制 AGI CPU)。但 3 个月 +240% 后股价偏延伸 &mdash; 战术谨慎。此处不追; 在历史新高尖峰处部分获利; 回调 12-15% 后再加仓。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">ARM</span><span class="tag t-stock">NVDA</span><span class="tag t-stock">MSFT</span><span class="tag t-stock">SNPS</span><span class="tag t-stock">CDNS</span>
+      <span class="tag t-sector">半导体</span><span class="tag t-sector">IP 授权</span><span class="tag t-sector">AI-PC</span>
+      <span class="tag t-pos">利多 (但延伸)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">11</div><div>
+    <div class="headline">英特尔 (INTC) Computex Day 2-3 &mdash; <b>Xeon 6+ "Clearwater Forest" 已发布</b> &mdash; 首款 18A DC CPU, <b>288 E-cores, 576MB L3</b>, "已大规模量产", "数百个设计中标"; 取消超线程; <b>Diamond Rapids (Xeon 7) 推迟至 2027</b> 18A-P, PCIe 6.0, 2 倍内存带宽; <b>Crescent Island GPU</b> Xe3P, 160GB 参考 / 合作伙伴配置 <b>最高 480GB LPDDR5X</b>, 684 GB/s, 350W PCIe, 2H 2026 (绕过 HBM 短缺); INTC 主旨演讲后疲软</div>
+    <div class="body">YTD 约 +200% 后"消息出货"。Crescent Island 480GB LPDDR5X 巧妙绕过内存紧张但绝对性能不敌 NVDA。Diamond Rapids 推迟至 2027 意味 <b>英特尔有约 12-18 个月</b>窗口期,然后 Vera CPU 全面量产蚕食份额。战术做空至 7 月 Q2 财报; 仓位 1-1.5%; 仅在更低价位才能投降。AMD 因 Helios MI455X / MI400 故事失去相对买盘但比 INTC 站位更好。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">INTC</span><span class="tag t-stock">AMD</span><span class="tag t-stock">NVDA</span><span class="tag t-stock">QCOM</span>
+      <span class="tag t-sector">半导体</span><span class="tag t-sector">数据中心 CPU</span><span class="tag t-sector">代工</span>
+      <span class="tag t-neg">利空 (INTC)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">12</div><div>
+    <div class="headline">AMD &mdash; Supermicro 在 Computex 发布 <b>Helios 机架</b>,基于 <b>MI455X GPUs</b> + 第六代 EPYC + Pensando; <b>每机架 72 颗 MI455X, 31TB HBM4, 1.4 PB/s 总带宽, 推理 2.9 FP4 exaFLOPS / 训练 1.4 FP8 exaFLOPS</b>; Helios / MI400 系列预计 <b>2H 2026 GA</b> &mdash; 直接对标 NVL72; <b>MI450 6GW Meta 协议</b> (~$60B) 首 1GW 2H 2026 落地</div>
+    <div class="body">AMD 现已拼凑出可信的 2H 2026 平台叙事,以变现 Meta MI450 中标并在机架层面挑战 NVDA。NVDA 仍在推理性价比上获胜 (Vera Rubin 1/7 成本),但 AMD 在 Meta 类工作负载上具竞争力。配对交易: 多 AMD 空 INTC。7 月 Q2 财报是二元催化剂。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">AMD</span><span class="tag t-stock">SMCI</span><span class="tag t-stock">META</span><span class="tag t-stock">NVDA</span>
+      <span class="tag t-sector">半导体</span><span class="tag t-sector">AI 硬件</span><span class="tag t-sector">数据中心</span>
+      <span class="tag t-pos">利多</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">13</div><div>
+    <div class="headline">内存超级周期深化 &mdash; <b>MU HBM3E/HBM4 已售罄至 CY2026</b> 长期合约下; HBM4 36GB 12-Hi 出货给 Vera Rubin, <b>>2.8 TB/s, 功耗效率较 HBM3E +20%</b>; <b>HBM4 ASP 较 12-Hi HBM3E ~+30%</b> (约 $500/堆栈); <b>SK 海力士占 HBM4 60-70%</b> 份额, 三星 25-30%; HBM TAM <b>2028 年达 $100B</b> CAGR ~40%; SNDK NAND 合约价 2月 <b>环比 +3-8%</b>, 企业级 SSD 同比 +15-20%</div>
+    <div class="body">最干净的"涨价"半导体故事,没有 AVGO/CRWD 式估值风险。传导至 MSFT $190B CY26 资本开支 (CFO Hood 称 $25B 来自内存通胀)。MU/SNDK 都是售罄叙事股,下次财报后有望重新估值更高。风险: 任何 HBM4 定价泄露标题。核心仓位 3-5%。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">MU</span><span class="tag t-stock">SNDK</span><span class="tag t-stock">000660.KS</span><span class="tag t-stock">005930.KS</span><span class="tag t-stock">WDC</span><span class="tag t-stock">TSM</span>
+      <span class="tag t-sector">内存</span><span class="tag t-sector">半导体</span><span class="tag t-sector">AI 硬件</span>
+      <span class="tag t-pos">利多</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">14</div><div>
+    <div class="headline">Alphabet (GOOGL/GOOG) &mdash; $80B 募资 <b>上调至 $84.75B</b>; <b>巴菲特 $10B 私募</b> ($5B GOOGL @ $351.81 + $5B GOOG @ $348.20); 自 Q3 2025 起建仓; <b>欧盟 DMA 罚款"高三位数百万欧元"</b> 因搜索自我偏好预计欧盟夏休前 (7 月前); 欧盟同时针对 <b>AI Overviews/Gemini</b> 作为额外自我偏好关切; 约束性决定 <b>2026 年 7 月前</b></div>
+    <div class="body">$30B 同步发行 ($15B 强制可转优先股 + $15B 普通股) + $40B ATM Q3 + $10B 巴菲特 = 互联网泡沫以来最大科技股权融资。强制可转价差 + 欧盟 DMA 压力 = GOOGL 在供应消化期间 2-3 周低配。反向利多: 确认超大规模 GPU/TPU 资本开支地板 (利多 NVDA/AVGO/MRVL/MU)。巴菲特入场象征为估值定锚而非祝福。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">GOOGL</span><span class="tag t-stock">BRK.B</span><span class="tag t-stock">NVDA</span><span class="tag t-stock">AVGO</span><span class="tag t-stock">CRWV</span>
+      <span class="tag t-sector">科技巨头</span><span class="tag t-sector">资本开支</span><span class="tag t-sector">欧盟监管</span>
+      <span class="tag t-neg">利空 (GOOGL)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">15</div><div>
+    <div class="headline">Anthropic <b>6/1 秘密递交 S-1</b> 早于 OpenAI &mdash; 目标 <b>投后估值 ~$965B</b>,跟随 5/28 收尾的 $65B H 轮; <b>2026 年 5 月营收年化 ~$47B</b> (前一年仅 $10B = 12 个月内 4.7 倍); 史上最高 IPO 前估值; 目标挂牌窗口 <b>2026 年 10 月</b>; xAI Colossus 1 租赁 $1.25B/月至 2029 年 5 月支撑算力; <b>Claude 进入 M365 Copilot 主流</b> + Azure AI Foundry GA</div>
+    <div class="body">72 小时内两个超大型 IPO (Anthropic S-1 + SpaceX 路演) = 高端科技倍数供应测试。NVDA / MSFT (Maia 200 Anthropic 谈判) / AMZN ($25B+ 持股) 均正向传导。新云 (CRWV, NBIS, IREN) 获得 GPU 租金价格地板。次新科技因 IPO 现金吸纳承压。Anthropic-on-Maia 谈判早期但 ServiceNow Action Fabric 使 Anthropic 成为首个设计合作伙伴 &mdash; 跨栈护城河构建中。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">NVDA</span><span class="tag t-stock">MSFT</span><span class="tag t-stock">AMZN</span><span class="tag t-stock">CRWV</span><span class="tag t-stock">NBIS</span><span class="tag t-stock">IREN</span><span class="tag t-stock">NOW</span>
+      <span class="tag t-sector">AI 软件</span><span class="tag t-sector">IPO 日历</span><span class="tag t-sector">AI 基础设施</span>
+      <span class="tag t-pos">利多 (主题)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">16</div><div>
+    <div class="headline">周五 6/5 08:30 ET &mdash; <b>5 月非农 / 失业率 / 时薪</b> &mdash; 共识 <b>+6.2万 非农</b> (范围 +4.9-6.5万), <b>失业率 4.3%</b>, <b>时薪环比 +0.3% / 同比 +3.8%</b>; 4 月为 <b>+11.5万</b> (vs +6.2万 共识, 大幅上行意外); ADP +12.2万 后私下预期略偏热; <b>密歇根大学情绪初值 6 月 10:00</b> (1Y 通胀预期前值 4.8% / <b>5-10Y</b> 为关键); <b>联储静默期 6/6 周六开始</b></div>
+    <div class="body">本周主导催化剂。格局悖论: ADP 偏热 + ISM 服务业偏热 + 褐皮书鹰派 &mdash; 市场希望非农疲软打破债熊,但所有领先指标全部偏热。<b>偏热 (>+9万, 失业率 4.2%, AHE +0.4%)</b> = TLT 短头脉冲后回补, VST/VLO 获利了结, 提高现金, 加 VIX。<b>持平 (+5-7.5万)</b> = 持仓不动, 3 PM 前微调。<b>疲软 (<+4万, 失业率 4.4%)</b> = 立即回补 TLT, 加仓 MU/MRVL/NVDA, 回补美元对冲。5-10Y 通胀预期 >3.5% 是 Warsh 关注的尾部风险。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">SPX</span><span class="tag t-stock">QQQ</span><span class="tag t-stock">TLT</span><span class="tag t-stock">IWM</span><span class="tag t-stock">DXY</span><span class="tag t-stock">GLD</span>
+      <span class="tag t-sector">宏观</span><span class="tag t-sector">就业</span><span class="tag t-sector">货币政策</span>
+      <span class="tag t-neu">中性 (二元)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">17</div><div>
+    <div class="headline">Constellation Energy (CEG) <b>6/2 +2.6%</b>,因 <b>FERC 豁免加速三里岛重启</b> &mdash; <b>2027 年目标从 2031 提前</b> 为微软数据中心供电; Calpine 收购 1/7 完成 (美国最大发电商); 2026 年 EPS 指引重申 $11-12; 2027 年指引被视为保守 (未含待签 DC PPA); 分析师将回调视为下次 PPA 前买入良机</div>
+    <div class="body">核电助力 AI 主题在日历上加速两年 &mdash; 利多 CEG,光环传导至 VST (META 2,600+ MW PPA 已签; Cogentrix 5,500 MW 即将关闭), TLN (AWS Susquehanna 至 1,920 MW 至 2042, 约 $1.4B/年)。"电力是新瓶颈"交易是最干净的长期标的,且对利率正向敏感 (不是 25 倍 SaaS 估值)。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">CEG</span><span class="tag t-stock">VST</span><span class="tag t-stock">TLN</span><span class="tag t-stock">NRG</span><span class="tag t-stock">BWXT</span><span class="tag t-stock">CCJ</span>
+      <span class="tag t-sector">核能</span><span class="tag t-sector">AI 电力</span><span class="tag t-sector">公用事业</span>
+      <span class="tag t-pos">利多</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">18</div><div>
+    <div class="headline">AI 电力"挖矿铲"标的 &mdash; GEV Q1 <b>$18.3B 订单 (+71% 有机)</b>, 创纪录 <b>$150B 积压</b>; 电气化部门 Q1 录得 <b>$2.4B DC 订单</b> (超过 2025 全年); ETN Q4 美洲电气 <b>$3.51B (+21%)</b> 24.9% 利润率, <b>$9.5B Boyd Thermal 收购</b>用于液冷; VRT Q4 订单 <b>+252% 同比, $15B 积压</b>, FY26 指引 $13.25-13.75B (+27-29%); PWR 创纪录 <b>$48.5B 积压</b>; GNRC 6/2 超大规模供应协议</div>
+    <div class="body">整个市场最强的"加速"业绩 &mdash; 而且仅交易 15-20 倍,不是 35 倍。对利率不如软件敏感,因为积压是多年合约定价。ERCOT 大负荷队列同比 +300% 至 233 GW; PJM 5/20 加速 DC 接入; FERC 12/18 允许在电厂联址。核心仓位 8-10%。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">GEV</span><span class="tag t-stock">ETN</span><span class="tag t-stock">VRT</span><span class="tag t-stock">PWR</span><span class="tag t-stock">GNRC</span>
+      <span class="tag t-sector">电气化</span><span class="tag t-sector">AI 电力</span><span class="tag t-sector">电网</span>
+      <span class="tag t-pos">利多</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">19</div><div>
+    <div class="headline">232 条款修订 <b>周一 6/8 EDT 0:01 生效</b> &mdash; 标准 25% 保留; <b>15% 档扩大</b>至农业设备、住宅 HVAC、某些工业机械; <b>欧盟/英国/日本/韩国/阿根廷/厄瓜多尔/萨尔瓦多/危地马拉/列支敦士登/瑞士/台湾</b>总关税封顶 15%; <b>USTR Greer (6/3) 提议对 60 个贸易伙伴征 10%+ 关税</b>因强制劳动调查 (多数 12.5%); 中国 30% 框架不变; 稀土管制暂停至 2026 年 11 月 10 日</div>
+    <div class="body">边际利多 DE/CAT/AGCO/PCAR/OSK,因农机/HVAC/机械减税; 资本设备 10% 如 85% 美产钢。<b>Bessent 6/3 在参议院财政委员会作证</b>关于 Trump 2027 预算 (平均退税 +11%); 确认履行 IRS 局长职责。最高法 2 月裁定 IEEPA 关税违宪; Trump 经 1974 贸易法 10% 全球关税替代 &mdash; 232 条款不受影响。欧盟/格陵兰 25% 威胁缓解 (Trump-Rutte 协议)。贸易整体稳定。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">DE</span><span class="tag t-stock">CAT</span><span class="tag t-stock">AGCO</span><span class="tag t-stock">PCAR</span><span class="tag t-stock">OSK</span><span class="tag t-stock">BA</span>
+      <span class="tag t-sector">贸易</span><span class="tag t-sector">地缘</span><span class="tag t-sector">工业</span>
+      <span class="tag t-pos">利多 (工业)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">20</div><div>
+    <div class="headline">周四 6/4 盘后 &mdash; <b>Lululemon (LULU)</b> 共识 EPS <b>$1.67 (-35.8% 同比)</b>, 营收 ~$2.40-2.43B; 入印前已在 <b>7 年低位</b>; 全年指引 <b>EPS $12.10-12.30 vs $13.26 上年</b>; 约 $3.8 亿关税总影响 (净影响约 90 bps); 北美同店预期负中个位数。<b>DocuSign (DOCU)</b> 共识 EPS <b>$0.99 (+10%)</b>, 营收 $824.75M (+8%); FY26 首次实现 <b>>30% 非 GAAP 营业利润率</b>, FCF >$1B。<b>伊朗核谈判</b>据报通过第三方渠道"重回正轨" (6/1 暂停名义保留)</div>
+    <div class="body">LULU 是消费可选项的"煤矿金丝雀" &mdash; 褐皮书刚标记"消费者承压",因此低于 $12.10 的指引下调将验证论点; 反向风险是 7 年低位的投降反弹。DOCU 稳定但无成长重估。伊朗变量保持双向 (霍尔木兹第 94 天 + 暂停的谈判 vs "重回正轨"报道)。持有国防 (LMT/NOC/RTX/GD) + 炼厂 + GLD 期权作为伊朗对冲至周五收盘。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">LULU</span><span class="tag t-stock">DOCU</span><span class="tag t-stock">NKE</span><span class="tag t-stock">LMT</span><span class="tag t-stock">XOM</span>
+      <span class="tag t-sector">消费可选</span><span class="tag t-sector">SaaS</span><span class="tag t-sector">地缘</span>
+      <span class="tag t-neu">中性 (二元)</span>
+    </div>
+  </div></div>
+
+</div>
+
+<h2>宏观日历 &mdash; 未来 48-96 小时</h2>
+<table class="cal">
+  <thead><tr><th>日期</th><th>时间 (ET)</th><th>事件/数据</th><th>重要性</th><th>为何重要</th></tr></thead>
+  <tbody>
+    <tr><td>周三 6/3 <b>(已公布)</b></td><td>08:15</td><td><b>ADP 5月: +12.2万</b> vs 共识 +11万; 4月修正至 +10.5万; 创 2025 年 1 月以来最强</td><td class="imp-high">极高</td><td>鹰派; 对 NFP 共识 +6.2万 的交叉信号; 债市买盘受抑制。</td></tr>
+    <tr><td>周三 6/3 <b>(已公布)</b></td><td>10:00</td><td><b>ISM 服务业 5月: 54.5</b> vs 53.8; 支付价格 <b>71.3 自 2022 年 8 月最高</b>; 就业 47.9 (连续 3 个月收缩); 工厂订单 +4.8%</td><td class="imp-high">极高</td><td>滞胀友好: 服务增长 + 就业冷却 + 价格炽热。Warsh 框架胜出。</td></tr>
+    <tr><td>周三 6/3 <b>(已公布)</b></td><td>14:00</td><td><b>联储褐皮书</b> (Warsh 首份): 伊朗外溢通胀; 消费者承压 (信用卡使用增加、零售访问减少)</td><td class="imp-high">高</td><td>为 6/16-17 FOMC 定调鹰派。</td></tr>
+    <tr><td>周三 6/3 <b>(已公布)</b></td><td>盘后</td><td><b>AVGO + CRWD</b> 双弹: AVGO 因未上调 SAM 盘后 -7 至 -13%; CRWD 因新增 ARR 处于中段 -9 至 -11%; CRWD 宣布 4 拆 1</td><td class="imp-high">极高</td><td>双股大跌; 周四开盘联动疲软风险。</td></tr>
+    <tr><td><b>周四 6/4</b></td><td>08:30</td><td><b>初请失业金</b> (共识 21.1万, 前值 21.5万) &middot; 4 月贸易差额 &middot; Q1 生产力 / 单位劳动力成本终值</td><td class="imp-high">高</td><td>>22.5万 = 债市买盘; ULC 修订支持 Warsh 工资通胀框架。</td></tr>
+    <tr><td>周四 6/4</td><td>10:00</td><td>4月批发库存</td><td class="imp-low">低</td><td>Q2 GDP 追踪输入。</td></tr>
+    <tr><td>周四 6/4</td><td>&mdash;</td><td><b>SpaceX IPO 路演启动</b> &mdash; $135/股, 募 $75B, 估值 $1.75T; 6/11 定价, 6/12 挂牌代码 SPCX</td><td class="imp-high">极高</td><td>2 倍历史最大 IPO; Nasdaq 高估值复合体供应测试。</td></tr>
+    <tr><td>周四 6/4</td><td>盘后</td><td><b>LULU</b> (共识 $1.67, 全年指引 $12.10-12.30 vs $13.26 上年), <b>DOCU</b> (共识 $0.99/+10%), RH</td><td class="imp-med">中高</td><td>LULU = 褐皮书"消费承压"后的消费金丝雀; DOCU 稳定但无成长重估。</td></tr>
+    <tr><td><b>周五 6/5</b></td><td><b>08:30</b></td><td><b>5 月非农 / 失业率 / 时薪</b> &mdash; 共识 +6.2万 / 4.3% / +0.3% 环比 / +3.8% 同比; 4 月 +11.5万 vs +6.2万 共识</td><td class="imp-high">极高</td><td><b>本周主导催化剂。</b> 偏热 >+9万 = 久期抛压延续; 疲软 <+4万 = TLT 反弹 + 科技买盘。</td></tr>
+    <tr><td>周五 6/5</td><td>10:00</td><td>密歇根大学情绪 6 月初值 (1Y 通胀预期前值 4.8%, <b>5-10Y</b> 为 Warsh 关注的关键系列)</td><td class="imp-med">中高</td><td>5-10Y >3.5% = 滞胀尾部; 行情驱动。</td></tr>
+    <tr><td>周五 6/5</td><td>15:00</td><td>4月消费信贷; 前值年化 +5.8%</td><td class="imp-low">低中</td><td>循环信贷 = 消费者承压信号 (褐皮书印证)。</td></tr>
+    <tr><td>周六 6/6 00:00</td><td>&mdash;</td><td><b>联储静默期开始</b> 至 6/16-17 FOMC (Warsh 首次以主席身份)</td><td class="imp-med">中</td><td>无联储口风; 宏观行情仅由数据驱动。</td></tr>
+    <tr><td>周六 6/7</td><td>&mdash;</td><td><b>OPEC+ 部长会议</b> (6 月 +18.8万桶/日已批准)</td><td class="imp-high">高</td><td>加产 >+18.8万 = 减仓油 50%; 维持/减产 = 加倍。</td></tr>
+    <tr><td>周日 6/8 00:01 EDT</td><td>&mdash;</td><td><b>232 条款修订生效</b> (钢/铝/铜); 15% 档扩大至农机/HVAC/机械; 欧盟 + 10 国 15% 封顶</td><td class="imp-med">中高</td><td>DE/CAT/AGCO/PCAR/OSK 边际利多。</td></tr>
+    <tr><td>持续</td><td>&mdash;</td><td><b>伊朗核谈判</b> (6/1 暂停但据报通过第三方渠道"重回正轨"); 霍尔木兹封锁第 94 天; 周六 OPEC</td><td class="imp-high">极高</td><td>霍尔木兹重新开放 = WTI 盘中 -5-7%; 延续封锁 = 布伦特 $100+ 基线。</td></tr>
+    <tr><td>持续</td><td>&mdash;</td><td><b>欧盟 DMA 谷歌罚款</b> 7/27 前约束性裁定; AI Overviews/Gemini 额外自我偏好担忧</td><td class="imp-med">中高</td><td>GOOGL 多周低配理由。</td></tr>
+    <tr><td>持续</td><td>&mdash;</td><td>Anthropic 秘密 S-1 (6/1); 10 月挂牌目标; xAI/Colossus 1 Anthropic 租约 $1.25B/月至 2029 年 5 月</td><td class="imp-med">中</td><td>为 2026 年 10 月 IPO 供应铺垫; 利好主题 NVDA/MSFT/AMZN/新云。</td></tr>
+    <tr><td>6/24 周二</td><td>&mdash;</td><td>高通投资者日 (数据中心 + 物理 AI 路线图)</td><td class="imp-med">中</td><td>QCOM 二元; 此时仓位克制。</td></tr>
+    <tr><td>7/2 周三</td><td>&mdash;</td><td>CRWD 4 拆 1 拆股后交易开始 (登记日 6/25)</td><td class="imp-low">低中</td><td>零售流动性催化剂; 反弹后存在"消息出货"风险。</td></tr>
+  </tbody>
+</table>
+
+<h2>分析与方向性结论 (3-5 日维度)</h2>
+
+<div class="concl">
+  <h3>整体市场立场</h3>
+  <p><b>9 日连涨在周三死于合适的催化剂。</b> 鹰派宏观鸡尾酒 (ADP +12.2万, ISM 服务业支付价格 <b>71.3</b> 自 2022 年 8 月最高) 与首个 <i>没有</i> 上调长期 SAM 的 AI 超大规模厂商 (AVGO 维持 $100B FY29) 碰撞。10 年期 4.48% 和 30 年期接近 5.0%, DXY 99.5 &mdash; 这是科技股每一笔倍数扩张交易都必须重新承销的格局。叠加 Warsh 首份褐皮书明确指出伊朗外溢通胀、联储周六静默期开始、周五失业率 4.3% 非农 &mdash; 市场宁愿周末前减仓而非追涨。<br><br>
+  <b>关键交叉信号:</b> (1) 业绩离散度残酷但合理 &mdash; PANW/MDB/DDOG/NET/SNOW/MRVL/ARM 都因显示 <i>加速</i> 增长而上涨; AVGO 和 CRWD 因仅"符合预期"且估值溢价而被惩罚。这是<b>质量与加速行情</b>,不是贝塔行情。(2) 能源是唯一同时具备基本面动量 (霍尔木兹第 94 天, WTI $96) 和正向利率敏感性的板块。(3) 电力/电网/核电仍是最干净的长期标的 &mdash; GEV $150B 积压、VRT $15B、TLN $1.4B/年 AWS 收入 &mdash; 且对利率敏感性不及软件。(4) SpaceX 今日路演启动吸引风险偏好资金流向单一标的; 投机性小盘 AI 预计有适度资金外流。<br><br>
+  <b>净仓位建议:</b> <b>62% 多头总仓位 / 28% 空头 / 7% 现金 / 3% 对冲 (VIX 看涨 + SPY 看跌)。</b> 净多 ~34%, 较本周开盘前 ~55% 大幅下降。倾向能源、电力、AVGO 之外的定制硅、以及选择性超大规模相关半导体。剔除高估值纯 SaaS (CRWD 反弹), 欧盟关税敞口股, LULU 财报前消费可选。</p>
+
+  <h3>指数、利率、外汇与商品观点</h3>
+  <table>
+    <thead><tr><th>资产</th><th>方向 (3-5日)</th><th>信心</th><th>理由</th></tr></thead>
+    <tbody>
+      <tr><td>标普 500</td><td class="dir-s">下行/震荡, 7,450-7,560</td><td>中</td><td>周五非农风险; 利率天花板; 内部宽度走窄。</td></tr>
+      <tr><td>纳斯达克 100</td><td class="dir-s">下跌 1-2%</td><td>中高</td><td>AVGO/CRWD 拖累 + AI 资本开支消化 + 利率敏感。</td></tr>
+      <tr><td>罗素 2000</td><td class="dir-s">跌幅最深</td><td>高</td><td>10 年期 4.48% + ISM 就业 47.9 = 小盘股克星。</td></tr>
+      <tr><td>10 年期美债</td><td class="dir-s">收益率上行 (债熊), 4.45-4.55%</td><td>中高</td><td>ISM 价格 + ADP + 褐皮书通胀; 直到非农疲软前无买盘。</td></tr>
+      <tr><td>30 年期美债</td><td class="dir-s">试探 5.00%, 可能短暂突破</td><td>中</td><td>期限溢价 + 供应 + Warsh 鹰派开场。</td></tr>
+      <tr><td>美元 DXY</td><td class="dir-b">上行至 100.0-100.5</td><td>中高</td><td>利差 + 风险规避 + 霍尔木兹溢价。</td></tr>
+      <tr><td>黄金</td><td class="dir-s">下行至 $4,350-4,400</td><td>中</td><td>实际利率 + 美元逆风; 但伊朗尾部维持地板。</td></tr>
+      <tr><td>WTI 原油</td><td class="dir-b">上行, $98-102</td><td>高</td><td>霍尔木兹第 94 天 + 周六 OPEC+ + 炼厂利润率飙升。</td></tr>
+      <tr><td>布伦特原油</td><td class="dir-b">上行, $100-104</td><td>高</td><td>霍尔木兹延续 = $150 尾部风险; 现货升水陡峭。</td></tr>
+      <tr><td>天然气</td><td class="dir-b">温和上行</td><td>中</td><td>电力需求 + 夏季制冷 + AI DC 负荷。</td></tr>
+      <tr><td>VIX</td><td class="dir-b">从 ~16 上行至 19-22</td><td>高</td><td>非农前 + 联储静默 + 业绩地雷 = 波动率买盘。</td></tr>
+    </tbody>
+  </table>
+
+  <h3>个股观点</h3>
+  <table>
+    <thead><tr><th>代码</th><th>方向</th><th>信心</th><th>理由与风险</th></tr></thead>
+    <tbody>
+      <tr><td>NVDA</td><td class="dir-b">看多</td><td>高</td><td>Vera Rubin 全面量产, Q3 GB300 NVL72 放量; AVGO 联动弱 = 入场点。</td></tr>
+      <tr><td>AVGO</td><td class="dir-n">中性 (反弹做空)</td><td>中</td><td>盘后 -10% 合理; 未上调 SAM = 天花板; 让其盘整 2-3 天。</td></tr>
+      <tr><td>MRVL</td><td class="dir-b">看多</td><td>高</td><td>黄仁勋"下一万亿" + NVLink Fusion + FY29 >$10B 定制; 周二 +32% 延续。</td></tr>
+      <tr><td>AMD</td><td class="dir-b">看多</td><td>中</td><td>MI455X Helios 机架落地; MI400 GA 2H26; 落后 NVDA 提供入场。</td></tr>
+      <tr><td>INTC</td><td class="dir-s">看空 (战术)</td><td>中</td><td>Clearwater Forest "消息出货" 在 YTD +200% 后; Diamond Rapids 推至 2027。</td></tr>
+      <tr><td>ARM</td><td class="dir-n">中性 (不追)</td><td>中</td><td>3 月 +240%; 基本面真实但延伸; 部分获利,回调 12-15% 再加。</td></tr>
+      <tr><td>MU</td><td class="dir-b">看多</td><td>高</td><td>HBM3E/4 售罄至 CY26; HBM4 ASP +30%; 最干净的"涨价"半导体。</td></tr>
+      <tr><td>SNDK</td><td class="dir-b">看多</td><td>中</td><td>NAND 合约价 +3-8% 环比; 最干净的纯 NAND 标的。</td></tr>
+      <tr><td>TSM</td><td class="dir-b">看多</td><td>高</td><td>CoWoS 75&rarr;130K WPM 2 倍; FY26 营收 >+30%; ADR 持仓不足。</td></tr>
+      <tr><td>ASML</td><td class="dir-s">看空</td><td>中</td><td>中国 2026 下滑; 欧盟 DMA 传染风险; 欧元逆风。</td></tr>
+      <tr><td>AMAT</td><td class="dir-s">看空</td><td>中</td><td>落后 LRCX; 后段制程占比; 中国拖累。</td></tr>
+      <tr><td>KLAC</td><td class="dir-n">中性</td><td>低</td><td>定价能力完好; 行情不友好。</td></tr>
+      <tr><td>LRCX</td><td class="dir-b">看多</td><td>中</td><td>Q2 +22% 加速; HBM TSV 敞口。</td></tr>
+      <tr><td>MCHP</td><td class="dir-b">看多</td><td>中</td><td>DC 业务 +65%, YTD +48%; 模拟周期转折。</td></tr>
+      <tr><td>STM</td><td class="dir-s">看空</td><td>低</td><td>欧盟敞口 + 关税悬念 + 汽车疲软。</td></tr>
+      <tr><td>ALAB / CRDO</td><td class="dir-b">看多</td><td>高</td><td>Scorpio X 320 通道 fabric; CRDO 最新季 +157%; AI fabric 瓶颈。</td></tr>
+      <tr><td>SNPS / CDNS</td><td class="dir-b">看多</td><td>中</td><td>CDNS $8B 积压; AI 设计周期锁定。</td></tr>
+      <tr><td>QCOM</td><td class="dir-n">中性 (持有至 6/24)</td><td>中</td><td>6/24 投资者日才是催化剂,现在不是。</td></tr>
+      <tr><td>MSFT</td><td class="dir-b">看多</td><td>高</td><td>$190B CY26 资本开支; $627B RPO (+99%); $80B Azure 未满足积压。</td></tr>
+      <tr><td>GOOGL</td><td class="dir-s">看空 (交易)</td><td>中</td><td>$84.75B 募资稀释 + 欧盟 DMA 罚款 + 2-3 周供应消化。</td></tr>
+      <tr><td>AMZN</td><td class="dir-b">看多</td><td>中</td><td>Trainium3 + 5GW Anthropic; AWS Susquehanna 1,920 MW。</td></tr>
+      <tr><td>META</td><td class="dir-n">中性</td><td>低</td><td>VST 2,600 MW PPA 表明资本开支热; 估值已满。</td></tr>
+      <tr><td>ORCL</td><td class="dir-b">看多</td><td>高</td><td>RPO $455B (+360% 环比); Stargate >5GW; OCI 指引 FY26 +77% 至 $18B。</td></tr>
+      <tr><td>CRM</td><td class="dir-s">看空</td><td>中</td><td>YTD -33% 延续; Agentforce ARR 不够; 指引清淡。</td></tr>
+      <tr><td>NOW</td><td class="dir-b">看多</td><td>中</td><td>Action Fabric + Anthropic 设计合作伙伴 Knowledge 2026。</td></tr>
+      <tr><td>IBM</td><td class="dir-n">中性</td><td>低</td><td>防御性, 无催化剂。</td></tr>
+      <tr><td>PANW</td><td class="dir-b">看多</td><td>高</td><td>Q $3B 创纪录; NGS ARR $8.13B (+60%); 目标价 $300; 动量。</td></tr>
+      <tr><td>CRWD</td><td class="dir-s">看空 (反弹做空)</td><td>高</td><td>盘后 -10% 合理; 新增 ARR 中段不及 $275M 私下预期; 估值完美预期。</td></tr>
+      <tr><td>ZS</td><td class="dir-b">看多 (逆向)</td><td>中</td><td>较峰值 -50%; ~35x 前瞻; 一年来首个像样建仓机会。</td></tr>
+      <tr><td>FTNT</td><td class="dir-b">看多</td><td>中</td><td>Q1 +20%; SASE 被低估。</td></tr>
+      <tr><td>S (SentinelOne)</td><td class="dir-n">中性</td><td>低</td><td>受 CRWD 下跌联动。</td></tr>
+      <tr><td>MDB</td><td class="dir-b">看多</td><td>高</td><td>财报后 +20.4%; AI 工作负载赢家; 过去一个月 +53%。</td></tr>
+      <tr><td>DDOG</td><td class="dir-b">看多</td><td>高</td><td>首次单季 >$1B (+32% 加速); FedRAMP High。</td></tr>
+      <tr><td>NET</td><td class="dir-b">看多</td><td>中</td><td>Agentic AI 叙事; +12% 延续。</td></tr>
+      <tr><td>SNOW</td><td class="dir-b">看多</td><td>高</td><td>产品收入 +34% 加速 &mdash; 此行情罕见。</td></tr>
+      <tr><td>PLTR</td><td class="dir-s">看空</td><td>中</td><td>估值争议加剧; 6/2 -5.7% 是信号。</td></tr>
+      <tr><td>HPE</td><td class="dir-n">中性</td><td>低</td><td>服务器周期真实但利润率混合。</td></tr>
+      <tr><td>DELL</td><td class="dir-b">看多</td><td>中</td><td>AI 服务器积压真实; 一线 ODM。</td></tr>
+      <tr><td>SMCI / ANET</td><td class="dir-b">看多</td><td>中</td><td>Helios 设计中标 + 以太网/AI fabric 顺风。</td></tr>
+      <tr><td>CRWV</td><td class="dir-b">看多</td><td>高</td><td>$99.4B 积压; Vera Rubin 验证。</td></tr>
+      <tr><td>NBIS</td><td class="dir-b">看多</td><td>高</td><td>同比 +684%; 1.2GW 宾州; 2030 年达 >5GW (与 NVDA)。</td></tr>
+      <tr><td>IREN</td><td class="dir-b">看多</td><td>高</td><td>$9.7B 微软合约 85% EBITDA 利润率 &mdash; 独特。</td></tr>
+      <tr><td>CEG</td><td class="dir-b">看多</td><td>高</td><td>FERC TMI 豁免将 2027 从 2031 提前; 微软锚定。</td></tr>
+      <tr><td>VST</td><td class="dir-b">看多</td><td>高</td><td>META 2,600 MW PPA + Cogentrix 5,500 MW 关闭; 多年可见度。</td></tr>
+      <tr><td>TLN</td><td class="dir-b">看多</td><td>高</td><td>AWS Susquehanna $1.4B/年 至 2042。</td></tr>
+      <tr><td>NRG</td><td class="dir-b">看多</td><td>中</td><td>电力需求外溢受益者。</td></tr>
+      <tr><td>BWXT</td><td class="dir-b">看多</td><td>高</td><td>$2.6B 海军 + Pele 项目; 国防 + 核能凸性。</td></tr>
+      <tr><td>OKLO</td><td class="dir-b">看多</td><td>中</td><td>7/4 临界目标完好; YTD -14% 提供入场。</td></tr>
+      <tr><td>SMR / NNE</td><td class="dir-b">看多 (小)</td><td>低-中</td><td>篮子交易; 仓位 1-2%; 投机性尾部。</td></tr>
+      <tr><td>LEU / CCJ</td><td class="dir-b">看多</td><td>中</td><td>HALEU 浓缩垄断故事; U3O8 长约 $90/磅。</td></tr>
+      <tr><td>GEV</td><td class="dir-b">看多</td><td>高</td><td>Q1 $18.3B 订单 +71% 有机, $150B 积压 &mdash; 同业最佳。</td></tr>
+      <tr><td>ETN</td><td class="dir-b">看多</td><td>高</td><td>EA $3.51B +21%, 24.9% 利润率; Boyd Thermal 液冷。</td></tr>
+      <tr><td>VRT</td><td class="dir-b">看多</td><td>高</td><td>订单 +252% 同比; $15B 积压; FY26 指引 +27-29%。</td></tr>
+      <tr><td>PWR</td><td class="dir-b">看多</td><td>高</td><td>$48.5B 创纪录积压; 电网建设长期主题。</td></tr>
+      <tr><td>GNRC</td><td class="dir-b">看多</td><td>中</td><td>6/2 超大规模供应协议 = 重估事件。</td></tr>
+      <tr><td>FSLR</td><td class="dir-n">中性</td><td>低</td><td>232 条款帮助本土但利率拖累。</td></tr>
+      <tr><td>ENPH / RUN</td><td class="dir-s">看空</td><td>中高</td><td>利率 + 消费者承压 (褐皮书); RUN 资产负债表最差。</td></tr>
+      <tr><td>NEE</td><td class="dir-n">中性</td><td>低</td><td>稳定但 30 年期 5% 封顶。</td></tr>
+      <tr><td>XOM / CVX</td><td class="dir-b">看多</td><td>高</td><td>$96 WTI + 霍尔木兹尾部; CEO 霍尔木兹警告。</td></tr>
+      <tr><td>PSX / VLO / MPC</td><td class="dir-b">看多</td><td>高</td><td>3-2-1 价差 YTD 翻倍; VLO +107% TSR; MPC $18.65/桶 同业最佳。</td></tr>
+      <tr><td>HF / DK</td><td class="dir-b">看多</td><td>中</td><td>小盘炼厂贝塔; 凸性更高。</td></tr>
+      <tr><td>EQT / RRC / AR</td><td class="dir-b">看多</td><td>中</td><td>天然气 + 电力需求; DC 供应合约谈判中。</td></tr>
+      <tr><td>KMI / WMB / TRGP</td><td class="dir-b">看多</td><td>中</td><td>中游 + LNG 出口顺风。</td></tr>
+      <tr><td>LMT / NOC / RTX / GD</td><td class="dir-b">看多</td><td>高</td><td>伊朗尾部 + B-21 + 导弹防御 + 海军; 国防买盘延续。</td></tr>
+      <tr><td>BA</td><td class="dir-n">中性</td><td>低</td><td>特异; 回避宏观交易。</td></tr>
+      <tr><td>DE / AGCO</td><td class="dir-s">看空</td><td>中</td><td>农机疲软; 消费者承压; 利率 &mdash; 232 条款边际帮助。</td></tr>
+      <tr><td>CAT</td><td class="dir-n">中性</td><td>低</td><td>矿业/DC 交叉信号。</td></tr>
+      <tr><td>PCAR</td><td class="dir-s">看空</td><td>中</td><td>卡车周期 + 关税拖累。</td></tr>
+      <tr><td>OSK</td><td class="dir-n">中性</td><td>低</td><td>国防组合抵消。</td></tr>
+      <tr><td>LULU</td><td class="dir-s">看空</td><td>高</td><td>今晚财报; 全年指引 $12.10-12.30 vs $13.26 PY; 关税冲击。<i>7 年低位有反弹风险。</i></td></tr>
+      <tr><td>DOCU</td><td class="dir-n">中性</td><td>中</td><td>今晚财报; >30% 营业利润率里程碑但无成长重估。</td></tr>
+      <tr><td>GLD</td><td class="dir-s">看空 (交易)</td><td>中</td><td>美元/实际利率逆风; 伊朗尾部维持地板。</td></tr>
+      <tr><td>TLT</td><td class="dir-s">看空</td><td>高</td><td>30 年期试探 5.0%; 非农 <+4万 前无买盘; <+4万 立即回补。</td></tr>
+    </tbody>
+  </table>
+
+  <h3>3-5 日 Top 3 多头</h3>
+  <ul>
+    <li class="pick"><b>VST (Vistra) &mdash; 多头, ~4% 仓位, 信心高:</b> META 2,600+ MW PPA + Cogentrix 5,500 MW 关闭 = 锁定多年现金流; 对利率不如 SaaS 敏感; 动量延续。<i>入场: 开盘或回到 5 日 VWAP。目标: 3-5 日 +7-9%。止损: -3.5% 或跌破 20 日均线。</i></li>
+    <li class="pick"><b>VLO (Valero) &mdash; 多头, ~3% 仓位, 信心高:</b> WTI $96+, 霍尔木兹第 94 天, 3-2-1 价差 YTD 翻倍; 炼厂是伊朗尾部最干净的表达 + 对利率正向敏感。<i>入场: 开盘; 周六 OPEC+ 后回调加仓。目标: +6-8% (布伦特 $100+ 情景)。止损: -3% 或 WTI 因降级标题跌破 $93。</i></li>
+    <li class="pick"><b>MU (美光) &mdash; 多头, ~3% 仓位, 信心高:</b> HBM3E/4 长约下售罄至 CY26; HBM4 ASP +30%; 最干净的<i>涨价</i>半导体故事,无 AVGO/CRWD 式估值风险; MSFT $190B 资本开支正向传导。<i>入场: 开盘。目标: +6-7%。止损: -4% 或 HBM4 定价泄露标题。</i></li>
+  </ul>
+
+  <h3>Top 2 空头/回避</h3>
+  <ul>
+    <li class="pick"><b>做空 CRWD &mdash; ~3% 仓位, 信心高:</b> 盘后 -10% 合理; 新增 ARR $256M 不及 $275M 私下预期; 计费弱; YTD +60-65% 后估值完美预期; 4 拆 1 (7/2) 在死猫反弹后形成"消息出货"窗口。<i>入场: 前 90 分钟内任何 2-4% 反弹。目标: -6-8% (向 $640)。止损: 高于入场 +4% 或收复财报前价位。</i></li>
+    <li class="pick"><b>做空 TLT &mdash; ~4% 仓位, 信心高:</b> 30 年期试探 5.0%, ISM 价格 4 年最高, 褐皮书伊朗通胀, 联储周六静默期, Warsh 鹰派首次 FOMC。仅在非农 <+4万 才有基本面买盘。<i>入场: 开盘。目标: TLT -2 至 -3% (收益率 +10-15 bp)。止损: 非农 <+4万 立即回补; 或 TLT +1.5%。</i></li>
+  </ul>
+
+  <h3>风险管理检查点</h3>
+  <ul>
+    <li><b>周四 6/4 (今日)</b> &mdash; 08:30 <b>初请/贸易差额/ULC</b>; 10:00 批发库存; 全天 SpaceX 路演消息 (关注 ARKK/PLTR); 盘后 <b>LULU + DOCU</b>。<i>计划: 开盘加 VST/VLO/MU, 前 90 分钟内 CRWD 反弹做空, TLT 短小幅入场; 霍尔木兹重新开放标题 = 能源减 50%。</i></li>
+    <li><b>周五 6/5 &mdash; 决战日</b> &mdash; 08:30 <b>5 月非农/失业率/AHE</b>。<b>偏热 (>+9万)</b>: 回补 TLT 短 1/3, VST/VLO 获利, 现金至 15%, 加 VIX。<b>持平 (+5-7.5万)</b>: 持仓, 3 PM 前微调。<b>疲软 (<+4万)</b>: 立即回补 TLT, 加仓 MU/MRVL/NVDA。10:00 密歇根 5-10Y 通胀预期 >3.5% = 滞胀重估。</li>
+    <li><b>周六 6/6</b> &mdash; <b>OPEC+ 部长会议</b>; 联储静默期开始。加产 >+18.8万桶/日 = 减仓油 50%; 维持/减产 = 加倍。</li>
+    <li><b>周日-一 6/7-6/8</b> &mdash; 232 条款修订周一 0:01 生效。DE/CAT/AGCO/PCAR/OSK 重估; 欧盟半导体 (ASML/STM) 关税封顶明确化。</li>
+    <li><b>每个交易时段</b> &mdash; <b>霍尔木兹第 94+ 天</b>, 伊朗核谈状态, 俄罗斯炼厂袭击; 欧盟 DMA 谷歌罚款; Anthropic IPO 消息; SpaceX 路演资金流。</li>
+  </ul>
+
+  <h3>持仓至周五收盘结构</h3>
+  <p>
+    <b>多头 (总仓 ~62%):</b> 电力/电网/核能核心 14% (VST 4, GEV 3, VRT 2, ETN 2, TLN 1.5, CEG 1.5); 能源 12% (VLO 3, MPC 2, XOM 2, CVX 2, PSX 1.5, EQT 1.5); AVGO 之外的 AI 半导体质量 13% (NVDA 4, MU 3, MRVL 2.5, TSM 2, ALAB 1, CRDO 0.5); 超大规模/云 10% (MSFT 4, ORCL 3, AMZN 2, NOW 1); 加速增长软件 6% (MDB 2, DDOG 2, SNOW 1, PANW 1); 新云 4% (CRWV 1.5, NBIS 1.5, IREN 1); 国防 3% (NOC 1.5, LMT 1, BWXT 0.5)。<br>
+    <b>空头/对冲 (~28%):</b> CRWD 3, TLT 4, ASML 2, CRM 2, ENPH 2, RUN 1, DE 2, AGCO 1, PCAR 1, GOOGL 3 (交易), IWM 4, ARM 3 (尖峰处部分获利)。<br>
+    <b>对冲 (~3%):</b> VIX 6 月行权价 20 看涨 1.5; SPY 6 月月度 0.5 Delta 看跌 1.5。<br>
+    <b>现金 (~7%):</b> 周五 08:35 非农反应储备。<br>
+    <b>持平/回避:</b> INTC, LULU (双方都不持 &mdash; 7 年低位反弹风险但基本面已破), AVGO (让其盘整), PLTR, FSLR, BA, KLAC, S (联动)。<br>
+    <b>净仓位: 约 34% 净多</b>, 较周前 ~55% 大幅下降, 偏好能源/电力 + AVGO 之外的定制硅 + 内存; 以做空久期 (TLT)、CRWD 反弹空、GOOGL 低配、罗素贝塔空融资。<br><br>
+    <b>最大信心点:</b> 市场为<i>加速</i>付费,不是为<i>规模</i>。AVGO 和 CRWD 不是坏公司 &mdash; 它们是坏建仓时机。VST/GEV/VRT/MU/MRVL/CRWV/IREN/ORCL 都显示出相对于积压增长合理估值的加速。配对久期空头和事件空头,组合在鹰派或持平非农下都获胜,只在干净的鸽派意外下亏损 &mdash; 而在那种情况下能源/电力核心仍因霍尔木兹第 94 天而工作。<i>警告: 一个霍尔木兹重新开放标题崩塌组合的 30%。机械止损保持严格。</i>
+  </p>
+</div>
+
+
+<div class="footnote">
+  自动化每日报告 &middot; 2026-06-04 (周四, 盘前, 距非农 T-1, AVGO/CRWD/ADP/ISM 服务业/褐皮书之后) &middot; 所有数据综合自公开网络来源 (CNBC, Bloomberg, Reuters, Yahoo Finance, TheStreet, MarketWatch, NPR, Al Jazeera, CNN, BLS, BEA, Census, 联邦储备, 财政部, NRC, DOE, NVIDIA 新闻稿, Broadcom IR, CrowdStrike IR, Tom's Hardware, ServeTheHome, Intel 新闻稿, AMD 新闻稿, Arm 新闻稿, Anthropic, OpenAI, Constellation IR, Vistra IR, Talen IR, GE Vernova IR, Eaton IR, Vertiv IR, Quanta IR, Generac PR, Brookings, Utility Dive, OilPrice, TrendForce, DCD, 白宫情况说明, 世界核能新闻, Polymarket, SemiWiki, SimplyWallSt)。信息性研究, 非投资建议。仓位规模与风险管理由用户自负。
+</div>
+
+</div>
+
+</body>
+</html>
