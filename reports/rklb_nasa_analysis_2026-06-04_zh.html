@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>RKLB & NASA 专题分析 &mdash; 2026-06-04</title>
+<style>
+  :root{
+    --bg:#0f1419;--card:#1a1f2e;--border:#2d3748;--text:#e2e8f0;--muted:#94a3b8;
+    --pos:#10b981;--neg:#ef4444;--neu:#f59e0b;--accent:#60a5fa;--hi:#a78bfa;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;padding:24px;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+  .wrap{max-width:1100px;margin:0 auto}
+  header{border-bottom:1px solid var(--border);padding-bottom:16px;margin-bottom:24px}
+  h1{margin:0 0 4px 0;font-size:26px}
+  h2{margin:28px 0 12px 0;font-size:20px;color:var(--accent);border-left:3px solid var(--accent);padding-left:10px}
+  h3{margin:18px 0 8px 0;font-size:16px;color:var(--hi)}
+  .meta{color:var(--muted);font-size:13px}
+  .tape{display:flex;flex-wrap:wrap;gap:14px;margin-top:10px;font-size:13px;color:var(--muted)}
+  .tape span b{color:var(--text)}
+  .news{display:grid;grid-template-columns:1fr;gap:12px}
+  .item{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px 16px;display:grid;grid-template-columns:36px 1fr;gap:12px}
+  .num{font-size:22px;font-weight:700;color:var(--accent);line-height:1.1}
+  .headline{font-size:15px;font-weight:600;margin:0 0 6px 0}
+  .body{font-size:13.5px;color:var(--text);margin:0 0 8px 0}
+  .tagrow{display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-size:11px;padding:3px 8px;border-radius:999px;font-weight:600;letter-spacing:.3px}
+  .t-sector{background:#1e293b;color:#cbd5e1;border:1px solid #334155}
+  .t-stock{background:#172554;color:#bfdbfe;border:1px solid #1e3a8a}
+  .t-pos{background:rgba(16,185,129,.15);color:var(--pos);border:1px solid var(--pos)}
+  .t-neg{background:rgba(239,68,68,.15);color:var(--neg);border:1px solid var(--neg)}
+  .t-neu{background:rgba(245,158,11,.15);color:var(--neu);border:1px solid var(--neu)}
+  table.cal{width:100%;border-collapse:collapse;font-size:13px;background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+  table.cal th,table.cal td{padding:8px 12px;text-align:left;border-bottom:1px solid var(--border);vertical-align:top}
+  table.cal th{background:#111827;color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.5px}
+  table.cal tr:last-child td{border-bottom:none}
+  .imp-high{color:var(--neg);font-weight:700}
+  .imp-med{color:var(--neu);font-weight:600}
+  .imp-low{color:var(--muted)}
+  .concl{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-top:14px}
+  .concl table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px}
+  .concl th,.concl td{padding:7px 10px;border-bottom:1px solid var(--border);text-align:left;vertical-align:top}
+  .concl th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase}
+  .dir-b{color:var(--pos);font-weight:600}
+  .dir-s{color:var(--neg);font-weight:600}
+  .dir-n{color:var(--neu);font-weight:600}
+  .pick{margin:6px 0;padding-left:18px}
+  .footnote{font-size:11px;color:var(--muted);margin-top:24px;padding-top:14px;border-top:1px solid var(--border)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>RKLB &amp; NASA 专题分析 &mdash; 盘前简报</h1>
+  <div class="meta">生成于周四 2026-06-04 &middot; <i>核心议题: SpaceX 路演本日启动对 RKLB 估值的影响; NASA FY27 预算与 MTO 火星电信轨道器进展</i></div>
+  <div class="tape">
+    <span><b>RKLB 6/3 收盘 ~$114.27</b> (盘中 $113.66-$122.50); 较 5/27 历史高位 <b>$151.00 回撤 ~24%</b></span>
+    <span>市值 <b>~$66-71B</b>; 受 SpaceX IPO 估值担忧带动太空板块抛售</span>
+    <span><b>Q1 FY26 营收创纪录 $200.3M (+63.5% 同比)</b>; 积压 <b>$2.2B (+106% 同比)</b>; Q2 指引 $225-240M</span>
+    <span><b>Neutron 首飞推迟至 Q4 2026</b> (1月水压测试爆裂); 五次发射协议含单笔 $200M+ 大单</span>
+    <span><b>NASA Artemis II 已于 4/1-11 完成首次载人月球绕飞</b>; Artemis III 目标 2027 年中</span>
+    <span><b>NASA FY27 预算白宫请求 $18.8B</b> (较 FY26 削减 23%); 国会预计再次拒绝最深的削减</span>
+    <span><b>MSR 火星采样返回项目已取消</b> (国会 1 月未拨款) &mdash; MTO 接力</span>
+    <span><b>SpaceX IPO 本日启动路演</b>: $135/股, $1.75T 估值, 6/11 定价 6/12 SPCX 挂牌 &mdash; 太空板块多杀多风险</span>
+  </div>
+</header>
+
+<h2>RKLB &amp; NASA 重要新闻 &amp; 催化剂 (近 7 日)</h2>
+<div class="news">
+
+  <div class="item"><div class="num">01</div><div>
+    <div class="headline">SPACEX IPO 本日启动路演 &mdash; <b>$135/股, $1.75-1.77T 估值</b>, 募资 ~$75B (史上最大 IPO); <b>6/11 定价, 6/12 Nasdaq 代码 SPCX</b>; 主承高盛, 副承 MS/BofA/Citi/JPM; Musk 保留 >82% 投票权; Morningstar 称 "估值接近公允价值两倍"; 已带动 <b>ASTS -11 至 -15%, RDW -4%, RKLB -2%, LUNR -2%</b></div>
+    <div class="body">本周 RKLB 最大的<b>外部</b>催化剂。SpaceX 上市为整个纯太空板块定下相对估值基准 &mdash; 若 SpaceX 定价偏高,RKLB 估值倍数仍能撑住; 若市场对 SpaceX 估值反感,RKLB 是最直接的被洗刷标的 (94 倍营收对比 RKLB 约 75-85 倍营收)。<b>Jefferies 据报正与做空 SpaceX 的对冲基金接洽</b>,这一对冲机制可能延伸到 RKLB。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span><span class="tag t-stock">SPCX</span><span class="tag t-stock">ASTS</span><span class="tag t-stock">RDW</span><span class="tag t-stock">LUNR</span>
+      <span class="tag t-sector">太空</span><span class="tag t-sector">IPO 日历</span>
+      <span class="tag t-neg">利空 (近期多杀多)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">02</div><div>
+    <div class="headline">RKLB Q1 FY26 (5/7 公布) &mdash; 营收创纪录 <b>$200.3M (+63.5% 同比)</b>; 太空系统 $136.7M, 发射服务 $63.7M (+78.9% 同比); GAAP 毛利率创纪录 <b>38.2%</b>; <b>积压创纪录 $2.2B (+20.2% 环比, +106% 同比)</b>; Q2 指引营收 <b>$225-240M</b>, GAAP 毛利率 33-35%, 调整 EBITDA 亏损 $20-26M</div>
+    <div class="body">基本面强劲是 RKLB 估值溢价的核心支撑。营收同比 +63.5% 加速、毛利率 38.2% 创新高、积压翻倍 &mdash; 这是市场为"加速"付费的典型受益标的。但 Q2 营收指引 $225-240M (中位数 +16% 环比) 暗示二季度增速可能放缓,需要关注 Q2 财报兑现节奏 (8 月)。EBITDA 仍亏损是估值天花板。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span>
+      <span class="tag t-sector">太空</span><span class="tag t-sector">财报</span><span class="tag t-sector">发射服务</span>
+      <span class="tag t-pos">利多基本面</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">03</div><div>
+    <div class="headline">NEUTRON 火箭<b>首飞推迟至 2026 Q4</b> &mdash; 1/21 在马里兰设施一级燃料箱<b>水压测试中爆裂</b>; 抵达 Wallops LC-3 发射台目标已延期; <b>首飞将不尝试回收</b>,二次飞行才用着陆船。但 5/7 同时宣布 <b>5 次 Neutron 发射协议</b>,含<b>单笔 $200M+ 大单</b> (RKLB 史上最大单次发射合同, 客户保密)</div>
+    <div class="body">Neutron 是 RKLB 估值的<b>二元催化剂</b>。首飞成功 = 解锁 NSSL Phase 3 Lane 1 任务订单 (池 $5.6B 5年)、Golden Dome 助推段拦截作战概念、潜在 MTO 火星任务的发射服务。首飞失败或再推迟 = 估值倍数压缩。Q4 2026 时间窗口紧绷, 推荐将首飞作为 9-12 月的关键里程碑监控。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span>
+      <span class="tag t-sector">太空</span><span class="tag t-sector">火箭研发</span><span class="tag t-sector">NSSL</span>
+      <span class="tag t-neu">中性 (二元)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">04</div><div>
+    <div class="headline">MTO 火星电信轨道器 &mdash; RKLB <b>有望竞标 NASA $7 亿 MTN 任务领跑者</b>; 由 Cruz 参议员立法强制要求 FY26 末 (9/2026) 前完成授标,2028 年发射窗口; 设计采用<b>火星同步轨道 ~17,000 km, 光学激光通信</b>; <b>NASA 已授予 RKLB $390,936 戈达德研究合同</b>"火星端到端通信架构"; 竞争对手: SpaceX、Blue Origin、诺斯罗普·格鲁曼</div>
+    <div class="body"><b>MSR 火星采样返回项目 1 月被国会取消后,MTO 成为火星科学项目主力 &mdash; 这是 RKLB 估值的"硬"催化剂</b>。9 月授标决定为下一个 12 个月窗口的关键事件。RKLB 已经持有研究合同 + 整体垂直整合 (Geost 传感器 + Mynaric 光学激光) + Neutron 发射能力,综合分高于纯发射或纯卫星竞争者。基础情景: 假设 $700M 合同 5 年期, $140M/年, 占当前 RKLB 营收 ~15-18%。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span><span class="tag t-stock">LMT</span><span class="tag t-stock">NOC</span>
+      <span class="tag t-sector">NASA</span><span class="tag t-sector">火星</span><span class="tag t-sector">太空系统</span>
+      <span class="tag t-pos">利多 (关键催化剂)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">05</div><div>
+    <div class="headline">NASA FY27 预算 &mdash; 白宫请求 <b>$18.8B</b>, 较 FY26 国会通过的 $24.4B <b>削减 23%</b>; <b>$8.5B 用于 Artemis</b> (着陆器、宇航服、运输) + $175M 机器人月球基地; <b>$34 亿科学项目削减</b>,取消 40+ 任务; <b>$11 亿 ISS 削减</b>; 众议院拨款委员会 5/13 推进 CJS 法案; 国会预计再次拒绝最深削减 (FY26 已先例)</div>
+    <div class="body">对 RKLB 的<b>净影响中性偏多</b>: Artemis 资金保护 + 月球商业有效载荷服务 (CLPS) 加码,但科学项目削减可能影响 Electron 的科学客户管线 (TROPICS, PREFIRE 类小卫星)。MTO 在 Cruz 法案保护下,资金可见度仍存。<b>Isaacman 局长公开反对 50% 科学削减</b> &mdash; 这表明执行层与白宫预算请求存在分歧,最终拨款应介于两者之间。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span><span class="tag t-stock">LMT</span><span class="tag t-stock">BA</span><span class="tag t-stock">RTX</span>
+      <span class="tag t-sector">NASA</span><span class="tag t-sector">联邦预算</span><span class="tag t-sector">Artemis</span>
+      <span class="tag t-neu">中性偏多</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">06</div><div>
+    <div class="headline">NASA 局长 Jared Isaacman &mdash; <b>5/22 重组 NASA</b>: 将航空研究与太空技术合并为单一<b>研究与技术任务理事会</b> (含核动力/推进); 任务理事会直接向局长汇报; <b>5/26 月球基地公告</b>: <b>Moon Base I 目标 2026 秋季</b> 通过 Blue Origin Mk1 Endurance 着陆器送至 Shackleton Connecting Ridge; <b>Artemis III 堆叠夏季开始,目标 2027 年中</b></div>
+    <div class="body">Isaacman 的快速重组动作和强势媒体露面 &mdash; 削弱了"NASA 在过渡期失语"的担忧。月球基地节奏接近商业 SpaceX 风格,有利于商业承包商 (Blue Origin Mk1 已锁定首次基地任务)。RKLB 在月球轨道运输领域有CAPSTONE历史,Electron 仍是低成本 lunar dispense 的潜在选项,但月球着陆器市场已被 Astrolab、Lunar Outpost、Firefly、Blue Origin 主导。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span><span class="tag t-stock">LUNR</span><span class="tag t-stock">ACHR</span>
+      <span class="tag t-sector">NASA</span><span class="tag t-sector">月球</span><span class="tag t-sector">Artemis</span>
+      <span class="tag t-pos">利多 (商业月球)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">07</div><div>
+    <div class="headline">RKLB SDA 国防合同 &mdash; <b>Tranche 2 PWSA: $13亿 主承包合同</b>制造 36 颗卫星 (Mynaric CONDOR Mk3 终端); <b>Tranche 3 导弹跟踪: $805M 合同</b> 18 颗卫星; <b>Golden Dome 太空基拦截器</b>: 与雷神 (Raytheon) 合作 &mdash; LEO 拥挤星座搭载动能拦截器,执行助推/中段/滑翔阶段拦截</div>
+    <div class="body">国防合同是 RKLB 估值<b>结构性</b>支柱 &mdash; 不依赖 Neutron 首飞成功。Mynaric 收购 (4/14 完成,$1.553亿) 把光学激光终端业务垂直整合,Geost 收购 (2025/8/12 完成,$2.75亿) 把红外/可见光传感器垂直整合 &mdash; 现在 RKLB 是"从有效载荷到卫星总线到发射"全栈的国防太空承包商。Golden Dome 是 Trump 政府旗舰太空项目,与雷神搭档定位极佳。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span><span class="tag t-stock">RTX</span><span class="tag t-stock">LMT</span><span class="tag t-stock">NOC</span>
+      <span class="tag t-sector">国防</span><span class="tag t-sector">SDA</span><span class="tag t-sector">Golden Dome</span>
+      <span class="tag t-pos">利多</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">08</div><div>
+    <div class="headline">RKLB 分析师行动近 1 个月 &mdash; <b>Clear Street (Greg Pendy) 街最高目标价从 $98 上调至 $129</b>; <b>CFRA $140</b> (引用最高); <b>德意志银行 $120</b>; <b>Needham $120 从 $95, 买入</b>; 多数目标价 <b>低于当前 $114 现价</b> &mdash; 估值倍数扩张速度快于卖方更新。共识目标价约 $108-118 区间</div>
+    <div class="body">分析师覆盖偏滞后, 这是<b>风险信号</b>: 一旦动量转向, 缺乏卖方目标价上调护盘。但反向解读: 卖方仍有上调空间,尤其 Q2 财报兑现 + Neutron 进展正面情况下。<b>Beck (创始人 CEO) 3/2 抛售 18,857 股 ($1.31M)</b> 相对小,但 <b>2025 年 12 月累计抛售 ~$1.41 亿</b>,2025 全年合计 $2.69 亿 &mdash; 持续的内部人抛售是估值压力源。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span>
+      <span class="tag t-sector">分析师</span><span class="tag t-sector">内部人</span>
+      <span class="tag t-neu">中性 (滞后 + 内部人抛售)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">09</div><div>
+    <div class="headline">NSSL Phase 3 Lane 1 国防发射 &mdash; 太空军已将 <b>RKLB 加入承包商池</b>; 已授予 $500 万固定价格任务订单 (能力评估 / 定制任务保证); Lane 1 池总额 <b>~$56 亿 / 5 年</b>; 但 <b>RKLB 在 Neutron 首飞成功前无法竞标实际发射任务</b>; SpaceX 已获 $7.39 亿任务订单, Blue Origin 也已中标</div>
+    <div class="body">这是 Neutron 成功后的<b>真正大门</b>。SpaceX 已锁定 Lane 1 主要份额,但 Lane 1 池仍有 ~$48 亿可分配;RKLB 即使分到 10-15% 也意味着 $5-7 亿 / 5 年的发射任务收入,相当于当前发射服务业务的多年体量。Neutron 首飞 + 第二次飞行回收 + 第三次飞行客户付费载荷 &mdash; 这三个里程碑是 Lane 1 资格的实际门槛 (2027 年前)。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span><span class="tag t-stock">BA</span>
+      <span class="tag t-sector">国防发射</span><span class="tag t-sector">NSSL</span>
+      <span class="tag t-pos">利多 (中长期)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">10</div><div>
+    <div class="headline">CLPS &amp; 商业 LEO 平台 &mdash; NASA 将 <b>CLPS 合同上限提至 $42 亿 (从 $26 亿)</b>; <b>Intuitive Machines 中标 $1.804 亿任务订单</b> (其第 5 次 CLPS, IM-5 Nova-D 着陆器送 7 个有效载荷至南极); CLPS 2.0 RFP 已发出 (4 次着陆器任务 2026); <b>Vast Haven-1</b> 商业 LEO 平台目标 2026/5 发射 (首个独立商业 LEO 平台); <b>Axiom Hab One</b> 2026 内对接 ISS</div>
+    <div class="body">CLPS 是月球商业市场的<b>核心管道</b>。RKLB 当前未中标 CLPS 着陆器 (业务在 Lunar Outpost、Astrolab、Firefly、IM、Blue Origin 之间分配),但 Electron 仍是 CLPS 任务的潜在低成本发射选项。商业 LEO 平台 Vast Haven-1 / Axiom 给 Electron / Neutron 提供长期发射客户管线。NASA 在 ISS 之后向商业 LEO 转型的过程对 RKLB 是<b>长期顺风</b>。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span><span class="tag t-stock">LUNR</span><span class="tag t-stock">PL</span>
+      <span class="tag t-sector">NASA</span><span class="tag t-sector">CLPS</span><span class="tag t-sector">商业 LEO</span>
+      <span class="tag t-pos">利多 (长期)</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">11</div><div>
+    <div class="headline">商业载人运输 / ISS &mdash; <b>Starliner-1 将作为无人货运任务执行</b>, NET 2026/4 已进一步推迟 (推进器热问题持续); Starliner-2 载人最早 2026 年末 (前提是 Starliner-1 成功); <b>SpaceX Dragon 仍是唯一在役载人飞船</b>; Artemis II <b>已于 4/1-11 完成 694,481 英里月球飞越任务</b> Orion 在圣地亚哥近海溅落</div>
+    <div class="body">波音 Starliner 持续不可用为 SpaceX 巩固载人垄断; 也间接利好商业飞船(Dream Chaser, Dragon XL) 的相对竞争位置。RKLB 不在载人运输板块,但 Artemis II 成功为整个 Artemis 项目 (RKLB 通过 Mynaric 提供激光通信终端) 提供延续性。商业飞船的持续问题让<b>多元化发射服务商</b> (RKLB) 的国家安全价值上升。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">BA</span><span class="tag t-stock">RKLB</span><span class="tag t-stock">LMT</span>
+      <span class="tag t-sector">载人航天</span><span class="tag t-sector">Artemis</span>
+      <span class="tag t-neu">中性</span>
+    </div>
+  </div></div>
+
+  <div class="item"><div class="num">12</div><div>
+    <div class="headline">RKLB 收购整合进度 &mdash; <b>Mynaric (4/14 完成, $1.553 亿)</b>: 现金 + 2,277,002 RKLB 股; 加入光学激光通信终端; 设立 Rocket Lab Europe (慕尼黑总部); 3/31 FDI 审批通过。<b>Geost (2025/8/12 完成, $2.75 亿)</b>: ~$1.25 亿现金 + ~306 万 RKLB 股 + $5000 万对赌; 加入 EO/IR 传感器有效载荷。<b>SolAero 之前完成: 太阳能阵列</b></div>
+    <div class="body">RKLB 已完成从发射服务到卫星总线到传感器到光学通信终端的<b>垂直全栈整合</b> &mdash; 这是 SpaceX 之外唯一一家做到这一点的纯太空公司。Mynaric + Geost 合计稀释 ~530 万股 (现存 ~5 亿股), 稀释率 ~1% &mdash; 可控。整合执行风险是收购完成后 12 个月的关键监控点。这些资产同时强化 MTO 火星竞标的硬件配套优势。</div>
+    <div class="tagrow">
+      <span class="tag t-stock">RKLB</span><span class="tag t-stock">MYNA</span>
+      <span class="tag t-sector">收购整合</span><span class="tag t-sector">太空系统</span>
+      <span class="tag t-pos">利多 (战略)</span>
+    </div>
+  </div></div>
+
+</div>
+
+<h2>RKLB 基本面快照 (Q1 FY26 已公布)</h2>
+<table class="cal">
+  <thead><tr><th>指标</th><th>Q1 FY26 (3/31)</th><th>同比</th><th>Q2 FY26 指引</th><th>说明</th></tr></thead>
+  <tbody>
+    <tr><td>总营收</td><td><b>$200.3M 创纪录</b></td><td>+63.5%</td><td><b>$225-240M</b></td><td>Q2 中位数 +16% 环比</td></tr>
+    <tr><td>太空系统</td><td>$136.7M</td><td>n/a</td><td>含 Mynaric/Geost 贡献</td><td>~68% 营收占比</td></tr>
+    <tr><td>发射服务</td><td>$63.7M</td><td>+78.9%</td><td>Electron 主导</td><td>Neutron 尚未贡献营收</td></tr>
+    <tr><td>GAAP 毛利率</td><td><b>38.2% 创纪录</b></td><td>大幅提升</td><td>33-35%</td><td>Q2 含 Mynaric 整合成本</td></tr>
+    <tr><td>非 GAAP 毛利率</td><td>n/a</td><td>n/a</td><td>38-40%</td><td>反映规模效应</td></tr>
+    <tr><td>积压订单</td><td><b>$2.2B 创纪录</b></td><td>+106%</td><td>持续增长</td><td>环比 +20.2%</td></tr>
+    <tr><td>调整 EBITDA</td><td>负值</td><td>n/a</td><td>亏损 $20-26M</td><td>Neutron 研发投入持续</td></tr>
+    <tr><td>OpEx (GAAP)</td><td>n/a</td><td>n/a</td><td>$138-144M</td><td>Mynaric 集成</td></tr>
+  </tbody>
+</table>
+
+<h2>RKLB ↔ NASA 合作关系</h2>
+<table class="cal">
+  <thead><tr><th>项目</th><th>状态 / 金额</th><th>催化窗口</th></tr></thead>
+  <tbody>
+    <tr><td><b>VADR IDIQ</b> (NASA $3 亿池)</td><td>2022/1 中标; Electron 已发射 PREFIRE 和 TROPICS 任务; <b>2025/1 Neutron 加入 VADR 合同</b> &mdash; 重大新增</td><td>持续</td></tr>
+    <tr><td><b>MTO 火星电信轨道器</b></td><td>$7 亿 NASA 任务领跑者; 已获 <b>$390,936 戈达德研究合同</b>; Cruz 法案要求 FY26 末授标; 2028 火星窗口发射</td><td>授标 NLT <b>2026/9</b></td></tr>
+    <tr><td><b>CAPSTONE 月球轨道传统</b></td><td>Electron 已成功发射多个 NASA 有效载荷,包括 CAPSTONE (月球) 和 TROPICS 风暴星座</td><td>持续</td></tr>
+    <tr><td><b>科学任务管线</b></td><td>CLPS-邻近、科学任务提案正在进行; FY27 科学预算削减 $34 亿是风险</td><td>2026 年下半年</td></tr>
+  </tbody>
+</table>
+
+<h2>分析与方向性结论 (3-5 日 + 中期催化剂)</h2>
+
+<div class="concl">
+  <h3>RKLB 总体立场</h3>
+  <p><b>RKLB 处于"基本面强劲 + 短期估值压力"的张力区间。</b> Q1 FY26 营收 $200M (+63.5%)、积压 $2.2B (+106%)、毛利率 38.2% 创历史新高 &mdash; 这些数字解释了为什么从 2024 年 11 月以来股价上涨 5 倍多。但从 5/27 历史高位 $151 已回调 24% 至 ~$114, 多数卖方目标价 ($108-$140 区间) 已被现价超越,且 Beck 持续抛售 (2025 累计 $2.69 亿)。<br><br>
+  <b>本周最大外部催化剂 = SpaceX IPO (6/11-12)</b>。SpaceX 估值 $1.75T 接近 Morningstar 公允价值的两倍 &mdash; 这为 RKLB 估值的相对基准提供两种情景: (1) SpaceX 定价坚挺,RKLB 倍数随之锚定; (2) SpaceX 定价后下跌,RKLB 是最高 beta 的可比标的,可能再回调 8-12%。<br><br>
+  <b>中期 (3-12 个月) 催化剂三个</b>: ① <b>Q2 财报 (8 月初)</b> &mdash; 是否兑现 $225-240M 指引; ② <b>Neutron 首飞 (Q4 2026)</b> &mdash; 二元事件,成功解锁 NSSL Lane 1; ③ <b>MTO 授标 (9 月前)</b> &mdash; $7 亿 5 年合同,占当前营收 ~15-18%。<br><br>
+  <b>建议立场: 持有核心仓位 (~2-3% 投资组合),逢回调 (向 $95-105) 加仓; 当前不追多。</b> 短期对冲方式: 配对 RKLB 多 ASTS 空 (ASTS 同板块但纯卫星无发射,SpaceX IPO 周受影响更大)。</p>
+
+  <h3>方向性观点 &mdash; RKLB &amp; 相关</h3>
+  <table>
+    <thead><tr><th>代码</th><th>方向</th><th>信心</th><th>理由与风险</th></tr></thead>
+    <tbody>
+      <tr><td><b>RKLB</b></td><td class="dir-n">中性偏多 (持有, 不追)</td><td>中</td><td>基本面强劲但估值已 price-in; 内部人持续抛售; SpaceX IPO 周倍数承压; Neutron + MTO 是后续催化剂。<i>风险: Neutron 再推迟; SpaceX 上市后定价回落带动板块 -10%。</i></td></tr>
+      <tr><td>RKLB &mdash; 中期 (Q2 财报)</td><td class="dir-b">看多</td><td>中高</td><td>若兑现 $225-240M 指引中位数 ($232M),环比加速; Mynaric/Geost 整合贡献清晰; 8 月初财报后预计上涨 5-10%。</td></tr>
+      <tr><td>RKLB &mdash; 长期 (Neutron + MTO)</td><td class="dir-b">看多</td><td>高</td><td>Neutron Q4 首飞 + MTO 9 月授标 = 12 个月双催化剂; 若两者成功, 目标价 $160-180 (50% 上行)。<i>失败案例下行 -40%。</i></td></tr>
+      <tr><td>ASTS (AST SpaceMobile)</td><td class="dir-s">看空 (相对)</td><td>中高</td><td>过去几日已跌 -11 至 -15%; 纯卫星运营无发射护城河; SpaceX 直连市场威胁最大; 可作 RKLB 配对空头。</td></tr>
+      <tr><td>LUNR (Intuitive Machines)</td><td class="dir-b">看多</td><td>中</td><td>$180M 第 5 次 CLPS 任务订单; NASA 月球商业政策护持; 较 RKLB 估值低; CLPS 2.0 RFP 受益者。</td></tr>
+      <tr><td>RDW (Redwire)</td><td class="dir-n">中性</td><td>低</td><td>基础设施/组件; 波动性高; SpaceX IPO 周已跌 -4%; 等催化剂明确再入场。</td></tr>
+      <tr><td>PL (Planet Labs)</td><td class="dir-b">看多</td><td>中</td><td>4 个季度调整 EBITDA 盈利; 积压 +216% 同比; 过去一年 +1,000%; SDA / NRO 合同管线。</td></tr>
+      <tr><td>IRDM (Iridium)</td><td class="dir-n">中性</td><td>低</td><td>成熟运营商; $1.14 亿 FY25 净利; 季度股息 $0.15; 防御型。</td></tr>
+      <tr><td>BWXT (BWX Technologies)</td><td class="dir-b">看多</td><td>高</td><td>$2.6B 海军合同 + Pele 微反应堆; NASA 核电/核推进研究组合 (Isaacman 重组后整合); 国防 + 核能凸性。</td></tr>
+      <tr><td>LMT (Lockheed Martin)</td><td class="dir-b">看多</td><td>中</td><td>$160B+ 积压; F-35 + 机密太空; 伊朗尾部国防买盘; MTO 竞争者但传统优势。</td></tr>
+      <tr><td>NOC (Northrop Grumman)</td><td class="dir-b">看多</td><td>中高</td><td>B-21 + Cygnus + MTO 竞争者; 太空系统部门订单加速。</td></tr>
+      <tr><td>RTX (Raytheon)</td><td class="dir-b">看多</td><td>中高</td><td>Golden Dome 与 RKLB 合作主承; 导弹防御需求; 国防尾部交易。</td></tr>
+      <tr><td>BA (Boeing)</td><td class="dir-n">中性</td><td>低</td><td>Starliner 持续延迟; SLS 风险; 特异性问题; 回避宏观交易。</td></tr>
+      <tr><td>SPCX (SpaceX)</td><td class="dir-n">中性 (静观)</td><td>低</td><td>6/12 上市; Morningstar 称估值近两倍公允价值; 等首日定价后再判断。</td></tr>
+    </tbody>
+  </table>
+
+  <h3>关键催化剂日历</h3>
+  <table>
+    <thead><tr><th>日期</th><th>事件</th><th>对 RKLB 影响</th></tr></thead>
+    <tbody>
+      <tr><td><b>本周 (6/4 起)</b></td><td>SpaceX IPO 路演 &middot; ARKK / 太空 ETF 资金流向</td><td>近期估值压力; 已 -24% 自高点</td></tr>
+      <tr><td>6/11 周三 PM</td><td>SpaceX IPO 定价</td><td>定价坚挺 = 板块锚定; 偏低 = RKLB 短期反弹</td></tr>
+      <tr><td>6/12 周四</td><td>SpaceX Nasdaq 挂牌 (SPCX)</td><td>首日表现决定后续 1-2 周 RKLB 价格基调</td></tr>
+      <tr><td><b>6 月</b></td><td>Electron iQPS SAR 卫星发射 (575 km) + NET 6 月 Electron/Curie 任务</td><td>持续基础任务; 每次成功小幅利多</td></tr>
+      <tr><td>6 月</td><td>Starship V3 Flight 13 (5/21 取消后重试)</td><td>SpaceX Starship 进展; 板块情绪驱动</td></tr>
+      <tr><td><b>8 月初</b></td><td>RKLB Q2 FY26 财报 (预期 $225-240M 营收)</td><td>核心兑现催化剂; 兑现 = 5-10% 上行</td></tr>
+      <tr><td><b>9 月底</b></td><td>NASA MTO 授标 (NLT FY26 末)</td><td>$7 亿合同; 中标 = 10-20% 上行</td></tr>
+      <tr><td><b>Q4 2026</b></td><td>Neutron 首飞 (LC-3 Wallops)</td><td>二元事件; 成功 = NSSL Lane 1 解锁; 失败 = -25%</td></tr>
+      <tr><td>2027 年中</td><td>Artemis III 目标发射</td><td>RKLB 通过 Mynaric 间接受益 (激光通信)</td></tr>
+      <tr><td>2028 年</td><td>MTO 火星发射窗口</td><td>若 RKLB 中标且 Neutron 可用, 双重营收点</td></tr>
+    </tbody>
+  </table>
+
+  <h3>风险管理检查点</h3>
+  <ul>
+    <li><b>本周 (6/4-6/6)</b> &mdash; 监控 SpaceX 路演反馈、ASTS / RDW / LUNR 板块情绪; <b>RKLB 跌破 $108 = 触发分批加仓</b>; 升破 $130 = 减仓获利 30%。</li>
+    <li><b>6/11-6/12 SpaceX 定价 &amp; 挂牌</b> &mdash; 关注首日开盘价 vs $135 发行价; 高于 +20% = SpaceX 估值确认, RKLB 锚定; 低于 -10% = RKLB 估值倍数压力, 减仓避险。</li>
+    <li><b>8 月初 Q2 财报</b> &mdash; 兑现 $232M+ 营收中位数 + 毛利率 ≥34% = 加仓; 营收 <$220M 或毛利率 <33% = 减仓 50%。</li>
+    <li><b>9 月 MTO 授标</b> &mdash; RKLB 中标 = 加仓至 4-5% 组合; 输给 Blue Origin/SpaceX/NOC = 减仓 30%。</li>
+    <li><b>Q4 Neutron 首飞</b> &mdash; T-30 天前减仓 50% (二元风险); 首飞成功 + 入轨 = T+1 周加倍回补; 失败 = 等基本面修复 2-3 季度。</li>
+    <li><b>每周</b> &mdash; Beck 内部人抛售记录 (4-5 月停止后再启动 = 警报信号); NASA FY27 拨款国会进展。</li>
+  </ul>
+
+  <h3>建议持仓结构</h3>
+  <p>
+    <b>核心多头 (~2-3% 总仓位):</b> RKLB 核心持仓不变,逢 $105-110 加仓至 3%。<br>
+    <b>配对对冲 (~0.5-1%):</b> 短 ASTS 或 RDW 对冲 SpaceX IPO 周板块抛售 (相关性高且基本面更脆弱)。<br>
+    <b>相关多头 (~2%):</b> NOC 1% + RTX 1% &mdash; 获得 Golden Dome / Artemis 间接敞口,且对冲伊朗尾部。<br>
+    <b>避免:</b> SPCX (等首日定价后判断); BA (Starliner 不确定性); 不在 SpaceX 上市周的高 beta 太空小盘 (ASTS, RDW, LUNR 不持多)。<br><br>
+    <b>核心观点:</b> RKLB 是太空板块中<b>基本面最强 + 垂直整合最深 + NASA + DoD 多元化收入</b>的纯标的。短期承压来自外部 (SpaceX IPO) 而非自身基本面,因此回调即买入机会。Neutron + MTO 双催化剂在未来 6-9 个月有可能将股价从 $114 推至 $160-180 (50% 上行潜力),但仅当两者均成功时。当前估值已 price-in 70-80% 的成功概率,留给追多的安全边际有限,建议<b>分批建仓 + 严格止损</b>而非一次性加仓。
+  </p>
+</div>
+
+
+<div class="footnote">
+  RKLB &amp; NASA 专题分析 &middot; 2026-06-04 (周四, SpaceX 路演启动日) &middot; 所有数据综合自公开网络来源 (SEC EDGAR, RKLB IR, NASA 新闻稿/局长博客, SpaceNews, Payload Space, CNBC, Bloomberg, Reuters, Tipranks, Stocktwits, Aerotime, GovCon Wire, Orbital Today, Spaceflight Now)。信息性研究, 非投资建议。仓位规模与风险管理由用户自负。
+</div>
+
+</div>
+</body>
+</html>
